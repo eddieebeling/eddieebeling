@@ -166,12 +166,15 @@ export default {
     h1 {
       color: $gray-light;
     }
+    h2 {
+      color: $gray-slate-light;
+    }
     &__social-links {
       a {
-        color: $alternate;
+        color: $alternate-light;
       }
       a:hover {
-        color: $alternate-light;
+        color: $alternate;
       }
     }
   }

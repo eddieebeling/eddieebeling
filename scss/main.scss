@@ -1,7 +1,8 @@
 // CSS Custom Properties
 :root {
     --color-gray-light: #f7f7f7;
-    --color-gray-slate: rgba(124, 134, 144, 1);
+    --color-gray-slate: rgb(103, 115, 128);
+    --color-gray-slate-light: rgb(146, 167, 189);
     --color-gray-dark: #1b1b1b;
     --color-primary: rgba(36, 57, 80, 1);
     --color-primary-dark: rgba(19, 33, 48, 1);
@@ -17,6 +18,7 @@ $font-sans: "Montserrat", sans-serif;
 // Color Variables
 $gray-light: var(--color-gray-light);
 $gray-slate: var(--color-gray-slate);
+$gray-slate-light: var(--color-gray-slate-light);
 $gray-dark: var(--color-gray-dark);
 $primary: var(--color-primary);
 $primary-dark: var(--color-primary-dark);
