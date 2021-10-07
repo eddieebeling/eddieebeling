@@ -67,6 +67,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: $gray-dark;
+  padding: 0 1rem;
   &__intro {
     text-decoration: none;
     display: flex;
@@ -129,7 +130,7 @@ export default {
   width: 240px;
   height: 360px;
   clip-path: circle(30% at 50% 35%);
-  margin-bottom: -100px;
+  margin-bottom: -116px;
   @media (min-width: 961px) {
       display: none;
   }
