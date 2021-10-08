@@ -1,6 +1,4 @@
-# Eddie Ebeling
-
-## Creative Technologist & Front End Developer
+## Eddie Ebeling
 
 Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications.
 
