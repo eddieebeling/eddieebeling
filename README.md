@@ -7,7 +7,7 @@ Areas of expertise:
 * jQuery, AngularJS, Angular 2+, and Vue.js
 * .NET, Java, & Node
 * Product & app design, rapid prototyping
-* Frontend architecture and development
+* Front end architecture and development
 * User insights and website analytics
 
 Related experience:
