@@ -13,7 +13,6 @@
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
-    "@nuxtjs/google-analytics": "^2.4.0",
     "nuxt-ackee": "^2.0.0",
     "sass": "^1.42.1",
     "sass-loader": "^10.2.0"
