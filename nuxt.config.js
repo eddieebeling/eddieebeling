@@ -39,10 +39,13 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/google-analytics'
+    'nuxt-ackee'
   ],
-  googleAnalytics: {
-    id: 'UA-146855134-1'
+  ackee: {
+    server: 'https://ackee-eddieebeling.netlify.app',
+    domainId: '1a056d97-72c3-4fa5-b4b3-803375a7d62e',
+    ignoreLocalhost: false, // defaults to true
+    detailed: true // defaults to false
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
