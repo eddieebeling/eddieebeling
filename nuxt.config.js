@@ -39,7 +39,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    'nuxt-ackee'
+    '@nuxtjs/ackee'
   ],
   ackee: {
     server: 'https://ackee-eddieebeling.netlify.app',
