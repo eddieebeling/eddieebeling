@@ -28,7 +28,7 @@ export default {
     return {
       name: "Eddie Ebeling",
       title: "UI/UX and Front End Developer",
-      photoUrl: "/eddie-ebeling.jpg",
+      photoUrl: "/eddie-ebeling-portrait.jpg",
       socialLinks: [
         {
           platform: "Instagram",
