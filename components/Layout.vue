@@ -1,11 +1,14 @@
 <template>
-  <div class="main">
-    <div class="header">
+  <main>
+    <!-- <nav>
+      <i class="fas fa-ellipsis-v"></i>
+    </nav> -->
+    <header class="header">
       <div class="header__intro">
-        <img class="profile-pic" :src="photoUrl" :alt="title" />
-        <h1>{{ name }}</h1>
-        <h2>{{ title }}</h2>
-        <div class="header__social-links">
+        <img class="header__img" :src="photoUrl" :alt="title" />
+        <h1 class="header__name">{{ name }}</h1>
+        <h2 class="header__title">{{ title }}</h2>
+        <nav class="header__social-links">
           <a
             v-for="(item, index) in socialLinks"
             v-bind:key="index"
@@ -15,11 +18,13 @@
           >
             <i class="fab" v-bind:class="'fa-' + item.icon"></i>
           </a>
-        </div>
+        </nav>
       </div>
-    </div>
-    <div class="portrait" :style="`background-image:url('${photoUrl}');`"></div>
-  </div>
+    </header>
+    <figure class="portrait">
+        <img class="portrait__img" :src="photoUrl" :alt="`${name} ${title}`">
+    </figure>
+  </main>
 </template>
 
 <script>
@@ -60,6 +65,13 @@ export default {
 <style lang="scss">
 @import "./scss/main.scss";
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .header {
   width: 100%;
   height: 100%;
@@ -68,6 +80,9 @@ export default {
   align-items: center;
   color: $gray-dark;
   padding: 0 1rem;
+  @media (min-width: 961px) {
+      width: 50%;
+  }
   &__intro {
     text-decoration: none;
     display: flex;
@@ -75,6 +90,17 @@ export default {
     align-items: center;
     @media (min-width: 961px) {
         align-items: flex-start;
+    }
+  }
+  &__img {
+    background: #f7f7f7;
+    animation: fadein 0.5s;
+    width: 240px;
+    height: 360px;
+    clip-path: circle(30% at 50% 35%);
+    margin-bottom: -116px;
+    @media (min-width: 961px) {
+        display: none;
     }
   }
   &__social-links {
@@ -94,12 +120,13 @@ export default {
       transform: scale(1.12);
     }
   }
-  h1 {
+  &__name {
     font-size: 2rem;
     font-weight: 800;
     line-height: 1.5;
     margin: 0;
     color: $primary;
+    text-align: center;
 
     @media (min-width: 961px) {
       font-size: 3.5rem;
@@ -107,54 +134,36 @@ export default {
       line-height: 1.2;
     }
   }
-  h2 {
+  &__title {
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.2;
     margin: 0;
     color: rgba(124, 134, 144, 1);
+    text-align: center;
     @media (min-width: 961px) {
       font-size: 1.625rem;
     }
   }
 }
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-.profile-pic {
-  background: #f7f7f7;
-  animation: fadein 0.5s;
-  width: 240px;
-  height: 360px;
-  clip-path: circle(30% at 50% 35%);
-  margin-bottom: -116px;
-  @media (min-width: 961px) {
-      display: none;
-  }
-}
+
 .portrait {
   transition: background 0.3s ease-in 0.2s;
   background: #f7f7f7;
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
-  background-position: center;
-  background-image: url("/eddie-ebeling.jpg");
-  background-repeat: no-repeat;
+  height:100%;
+  width:50%;
+  margin:0;
   animation: fadein 0.5s;
   display: none;
 
   @media (min-width: 961px) {
-      width: 50%;
-      display: block;
+      display: flex;
   }
 
   &__img {
-    min-width: 100%;
-    max-height: 100%;
+    object-fit: cover;
+    width:100%; 
+    height:100%;
   }
 }
 
