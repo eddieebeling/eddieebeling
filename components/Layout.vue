@@ -23,6 +23,7 @@
     </header>
     <figure class="portrait">
         <img class="portrait__img" :src="photoUrl" :alt="`${name} ${title}`">
+        <figcaption class="sr-only">{{ name }} is a {{ bio }}</figcaption>
     </figure>
   </main>
 </template>
@@ -34,6 +35,7 @@ export default {
       name: "Eddie Ebeling",
       title: "UI/UX and Front End Developer",
       photoUrl: "/eddie-ebeling-portrait.jpg",
+      bio: "Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications.",
       socialLinks: [
         {
           platform: "Instagram",
