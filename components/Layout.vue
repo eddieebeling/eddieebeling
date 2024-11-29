@@ -65,7 +65,66 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./scss/main.scss";
+// CSS Custom Properties
+:root {
+    --color-gray-light: #f7f7f7;
+    --color-gray-slate: rgb(103, 115, 128);
+    --color-gray-slate-light: rgb(146, 167, 189);
+    --color-gray-dark: #1b1b1b;
+    --color-primary: rgba(36, 57, 80, 1);
+    --color-primary-dark: rgba(19, 33, 48, 1);
+    --color-secondary: rgba(105, 47, 12, 1);
+    --color-secondary-light: rgba(139, 67, 34, 1);
+    --color-alternate: rgba(167,127,88,1);
+    --color-alternate-light: rgba(195,150,106,1);
+}
+
+// Font Face
+$font-sans: "Montserrat", sans-serif;
+
+// Color Variables
+$gray-light: var(--color-gray-light);
+$gray-slate: var(--color-gray-slate);
+$gray-slate-light: var(--color-gray-slate-light);
+$gray-dark: var(--color-gray-dark);
+$primary: var(--color-primary);
+$primary-dark: var(--color-primary-dark);
+$secondary: var(--color-secondary);
+$secondary-light: var(--color-secondary-light);
+$alternate: var(--color-alternate);
+$alternate-light: var(--color-alternate-light);
+
+// Keyframes
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    font-family: $font-sans;
+    font-weight: 400;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: $gray-dark;
+  }
+  #__nuxt,
+  #__layout {
+    height: 100%;
+    position: relative;
+  }
+  .main {
+    position: relative;
+    display: flex;
+  }
+  .main > * { flex: 1; }
 
 main {
   display: flex;
