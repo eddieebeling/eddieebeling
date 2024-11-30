@@ -1,75 +1,21 @@
-# Nuxt Minimal Starter
+## Eddie Ebeling
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications.
 
-## Setup
+Areas of expertise:
+* HTML, CSS and JavaScript
+* jQuery, AngularJS, Angular 2+, and Vue.js
+* .NET, Java, & Node
+* Product & app design, rapid prototyping
+* Front end architecture and development
+* User insights and website analytics
 
-Make sure to install dependencies:
+Related experience:
+* Agile methodology
+* Continuous integration and DevOps (Azure, Jenkins)
+* Computer networking, hardware, and infrastructure
+* Social media marketing, content management, search engine optimization, and web accessibility
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Complimentary soft skills:
+* Creative problem solving and troubleshooting
+* Verbal communication, team collaboration, mentoring and leadership
