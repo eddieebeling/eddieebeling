@@ -54,7 +54,7 @@ useHead({
 
 useSeoMeta({
   title: name.value + ' | ' + title.value,
-  ogTitle: 'EddieEbeling.com',
+  ogTitle: name.value + ' | ' + title.value,
   description: `${name.value} is a ${bio.value}`,
   ogDescription: `${name.value} is a ${bio.value}`,
   ogImage: 'https://eddieebeling.com/img/eddie-ebeling.jpg',
