@@ -43,6 +43,22 @@ const socialLinks = ref([
 ]);
 const bio = ref('Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications.');
 const photoUrl = ref('/img/eddie-ebeling-portrait.jpg');
+
+useHead({
+  title: name.value + ' | ' + title.value,
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap' },
+  ],
+});
+
+useSeoMeta({
+  title: name.value + ' | ' + title.value,
+  ogTitle: 'EddieEbeling.com',
+  description: `${name.value} is a ${bio.value}`,
+  ogDescription: `${name.value} is a ${bio.value}`,
+  ogImage: 'https://eddieebeling.com/img/eddie-ebeling.jpg',
+});
 </script>
 
 <style lang="scss">
@@ -96,8 +112,7 @@ $alternate-light: var(--color-alternate-light);
     margin: 0;
     color: $gray-dark;
   }
-  #__nuxt,
-  #__layout {
+  #__nuxt {
     height: 100%;
     position: relative;
   }
