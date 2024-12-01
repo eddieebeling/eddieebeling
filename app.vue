@@ -138,7 +138,7 @@ main {
   color: $gray-dark;
   padding: 0 1rem;
   @media (min-width: 961px) {
-      width: 50%;
+      width: 55%;
   }
   &__intro {
     text-decoration: none;
@@ -208,7 +208,7 @@ main {
   transition: background 0.3s ease-in 0.2s;
   background: #f7f7f7;
   height:100%;
-  width:50%;
+  width:45%;
   margin:0;
   animation: fadein 0.5s;
   display: none;

@@ -12,6 +12,7 @@
   "dependencies": {
     "@vesp/nuxt-fontawesome": "^1.1.0",
     "nuxt": "^3.14.1592",
+    "nuxt-gtag": "^3.0.2",
     "vue": "latest",
     "vue-router": "latest"
   },
