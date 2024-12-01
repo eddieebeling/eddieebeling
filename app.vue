@@ -36,10 +36,10 @@ import { faGithub, faCodepen, faLinkedin, faInstagram } from '@fortawesome/free-
 const name = ref('Eddie Ebeling');
 const title = ref('UI/UX and Front End Developer');
 const socialLinks = ref([
-  { platform: "Instagram", icon: "instagram", url: "https://instagram.com/eddieebeling" },
-  { platform: "Linkedin", icon: "linkedin-in", url: "https://linkedin.com/in/eddieebeling" },
-  { platform: "Github", icon: "github", url: "https://github.com/eddieebeling" },
-  { platform: "Codepen", icon: "codepen", url: "https://codepen.io/eddieebeling" },
+  { platform: "Instagram", url: "https://instagram.com/eddieebeling" },
+  { platform: "Linkedin", url: "https://linkedin.com/in/eddieebeling" },
+  { platform: "Github", url: "https://github.com/eddieebeling" },
+  { platform: "Codepen", url: "https://codepen.io/eddieebeling" },
 ]);
 const bio = ref('Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications.');
 const photoUrl = ref('/img/eddie-ebeling-portrait.jpg');
@@ -57,7 +57,7 @@ useSeoMeta({
   ogTitle: name.value + ' | ' + title.value,
   description: `${name.value} is a ${bio.value}`,
   ogDescription: `${name.value} is a ${bio.value}`,
-  ogImage: 'https://eddieebeling.com/img/eddie-ebeling.jpg',
+  ogImage: 'https://eddieebeling.com/img/eddie-ebeling-small.jpg',
 });
 </script>
 
