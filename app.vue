@@ -21,9 +21,6 @@
         </section>
         <dialog ref="dialog" class="dialog">
           <form name="contact" method="POST" data-netlify="true" class="dialog__form">
-            <a @click="closeDialog" class="dialog__close">
-              <font-awesome :icon="faXmark" />
-            </a>
             <h2 class="dialog__title">Contact Me</h2>
             <label for="name" class="dialog__label">
               <span>Name</span>
