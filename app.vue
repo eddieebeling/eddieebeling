@@ -20,15 +20,15 @@
           <button class="section__cta" @click="openDialog">Contact me</button>
         </section>
         <dialog ref="dialog" class="dialog">
-          <form name="contact" method="POST" class="dialog__form" netlify>
+          <form class="dialog__form" name="contact" method="POST" data-netlify="true">
             <h2 class="dialog__title">Let's chat...</h2>
             <label for="name" class="dialog__label">
               <span>Name</span>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="name" autocomplete="name" required />
             </label>
             <label for="email" class="dialog__label">
               <span>Email</span>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" autocomplete="email" required />
             </label>
             <label for="message" class="dialog__label">
               <span>Message</span>
