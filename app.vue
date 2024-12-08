@@ -340,6 +340,31 @@ main {
       }
     }
   }
+
+  .dialog {
+    &__form {
+      background: $gray-dark !important;
+      color: $gray-light;
+
+      input,
+      textarea {
+        background: #2b2b2b;
+        color: $gray-light;
+        border: solid 1px $gray-slate-light;
+      }
+
+      button {
+        background: $primary !important;
+        color: $gray-dark;
+      }
+    }
+
+    &__label {
+      span {
+        color: $gray-slate !important;
+      }
+    }
+  }
 }
 
 /* Dialog Styles */
@@ -366,7 +391,7 @@ main {
     font-size: 1.8125rem;
     font-weight: 800;
     color: $primary;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-bottom: 0;
   }
 
@@ -385,7 +410,6 @@ main {
     margin: 0 auto;
     position: relative;
 
-
     span {
       font-size: 0.875rem;
       margin-bottom: 0.25rem;
@@ -398,6 +422,7 @@ main {
       border: 1px solid $gray-slate-light;
       border-radius: 0.25rem;
     }
+
     textarea {
       resize: none;
       height: 100px;
@@ -471,4 +496,5 @@ because the nesting selector cannot represent pseudo-elements. */
   dialog[open]::backdrop {
     background-color: rgb(0 0 0 / 0%);
   }
-}</style>
+}
+</style>
