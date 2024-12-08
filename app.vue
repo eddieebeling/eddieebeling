@@ -9,35 +9,18 @@
         <h1 class="header__name">{{ name }}</h1>
         <h2 class="header__title">{{ title }}</h2>
         <nav class="header__social-links">
-          <a
-            v-for="(item, index) in socialLinks"
-            :key="index"
-            :href="item.url"
-            :title="item.platform"
-          >
-            <font-awesome
-              v-if="item.platform === 'Codepen'"
-              :icon="faCodepen"
-            />
-            <font-awesome
-              v-else-if="item.platform === 'Github'"
-              :icon="faGithub"
-            />
-            <font-awesome
-              v-else-if="item.platform === 'Linkedin'"
-              :icon="faLinkedin"
-            />
-            <font-awesome
-              v-else-if="item.platform === 'Instagram'"
-              :icon="faInstagram"
-            />
+          <a v-for="(item, index) in socialLinks" :key="index" :href="item.url" :title="item.platform">
+            <font-awesome v-if="item.platform === 'Codepen'" :icon="faCodepen" />
+            <font-awesome v-else-if="item.platform === 'Github'" :icon="faGithub" />
+            <font-awesome v-else-if="item.platform === 'Linkedin'" :icon="faLinkedin" />
+            <font-awesome v-else-if="item.platform === 'Instagram'" :icon="faInstagram" />
           </a>
         </nav>
         <section class="section">
           <button class="section__cta" @click="openDialog">Contact me</button>
         </section>
         <dialog ref="dialog" class="dialog">
-          <form class="dialog__form" method="POST" name="contact" netlify>
+          <form name="contact" method="POST" data-netlify="true" class="dialog__form">
             <a @click="closeDialog" class="dialog__close">
               <font-awesome :icon="faXmark" />
             </a>
@@ -155,13 +138,16 @@ $alternate-light: var(--color-alternate-light);
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   font-family: $font-sans;
@@ -171,15 +157,18 @@ body {
   margin: 0;
   color: $gray-dark;
 }
+
 #__nuxt {
   height: 100%;
   position: relative;
 }
+
 .main {
   position: relative;
   display: flex;
 }
-.main > * {
+
+.main>* {
   flex: 1;
 }
 
@@ -198,18 +187,22 @@ main {
   align-items: center;
   color: $gray-dark;
   padding: 0 1rem;
+
   @media (min-width: 961px) {
     width: 55%;
   }
+
   &__intro {
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @media (min-width: 961px) {
       align-items: flex-start;
     }
   }
+
   &__img {
     background: #f7f7f7;
     animation: fadein 0.5s;
@@ -217,27 +210,32 @@ main {
     height: 360px;
     clip-path: circle(30% at 50% 35%);
     margin-bottom: -116px;
+
     @media (min-width: 961px) {
       display: none;
     }
   }
+
   &__social-links {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     margin: 0 -0.8rem;
     height: 60px;
+
     a {
       color: $secondary;
       padding: 1rem;
       animation: fadein 0.5s;
       transition: all 0.2s linear;
     }
+
     a:hover {
       color: $secondary-light;
       transform: scale(1.12);
     }
   }
+
   &__name {
     font-size: 2rem;
     font-weight: 800;
@@ -252,6 +250,7 @@ main {
       line-height: 1.2;
     }
   }
+
   &__title {
     font-size: 1.125rem;
     font-weight: 300;
@@ -259,6 +258,7 @@ main {
     margin: 0;
     color: rgba(124, 134, 144, 1);
     text-align: center;
+
     @media (min-width: 961px) {
       font-size: 1.625rem;
     }
@@ -267,6 +267,7 @@ main {
 
 .section {
   padding: 1rem 0;
+
   &__cta {
     background: transparent;
     color: $alternate;
@@ -321,17 +322,21 @@ main {
   body {
     background: $primary-dark;
   }
+
   .header {
     h1 {
       color: $gray-light;
     }
+
     h2 {
       color: $gray-slate-light;
     }
+
     &__social-links {
       a {
         color: $alternate-light;
       }
+
       a:hover {
         color: $alternate;
       }
@@ -462,5 +467,4 @@ because the nesting selector cannot represent pseudo-elements. */
   dialog[open]::backdrop {
     background-color: rgb(0 0 0 / 0%);
   }
-}
-</style>
+}</style>
