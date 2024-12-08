@@ -22,7 +22,7 @@
         <dialog ref="dialog" class="dialog">
           <form name="contact" method="POST" data-netlify="true" class="dialog__form">
             <h2 class="dialog__title">Let's chat...</h2>
-            <input type="hidden" name="subject" :value="`A new message from ${contactName}`" />
+            <input type="hidden" name="subject" value="A new contact form submission!" />
             <label for="name" class="dialog__label">
               <span>Name</span>
               <input type="text" id="name" name="name" required />
