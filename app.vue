@@ -20,6 +20,7 @@
           <button class="section__cta" @click="openDialog">Contact me</button>
         </section>
         <dialog ref="dialog" class="dialog">
+          <font-awesome :icon="faXmark" @click="closeDialog" class="dialog__close" />
           <form name="contact" method="POST" data-netlify="true" class="dialog__form">
             <h2 class="dialog__title">Let's chat...</h2>
             <label for="name" class="dialog__label">
@@ -354,6 +355,7 @@ main {
     cursor: pointer;
     color: $gray-slate;
     transition: all 0.2s linear;
+    z-index: 999;
 
     &:hover {
       color: $gray-slate-light;
@@ -399,6 +401,7 @@ main {
     textarea {
       resize: none;
       height: 100px;
+      font-family: $font-sans;
     }
 
     button {
