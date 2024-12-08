@@ -22,7 +22,6 @@
         <dialog ref="dialog" class="dialog">
           <form name="contact" method="POST" data-netlify="true" class="dialog__form">
             <h2 class="dialog__title">Let's chat...</h2>
-            <input type="hidden" name="subject" value="A new contact form submission!" />
             <label for="name" class="dialog__label">
               <span>Name</span>
               <input type="text" id="name" name="name" required />
@@ -58,7 +57,6 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const name = ref("Eddie Ebeling");
 const title = ref("UI/UX and Front End Developer");
@@ -363,7 +361,7 @@ main {
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.8125rem;
     font-weight: 800;
     color: $primary;
     margin-top: .5rem;
