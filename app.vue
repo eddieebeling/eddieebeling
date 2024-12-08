@@ -37,7 +37,7 @@
           <button class="section__cta" @click="openDialog">Contact me</button>
         </section>
         <dialog ref="dialog" class="dialog">
-          <form class="dialog__form" name="contact" netlify>
+          <form class="dialog__form" method="POST" name="contact" netlify>
             <a @click="closeDialog" class="dialog__close">
               <font-awesome :icon="faXmark" />
             </a>
@@ -54,7 +54,9 @@
               <span>Message</span>
               <textarea id="message" name="message" required></textarea>
             </label>
-            <button type="submit">Send</button>
+            <div>
+              <button type="submit">Send</button>
+            </div>
           </form>
         </dialog>
       </div>
@@ -404,6 +406,7 @@ main {
       cursor: pointer;
       transition: all 0.2s linear;
       border-radius: 0.3125rem;
+      width: 100%;
 
       &:hover {
         background: $alternate-light;
