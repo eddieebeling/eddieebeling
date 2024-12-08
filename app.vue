@@ -21,14 +21,14 @@
         </section>
         <dialog ref="dialog" class="dialog">
           <form name="contact" method="POST" data-netlify="true" class="dialog__form">
-            <h2 class="dialog__title">Contact Me</h2>
+            <h2 class="dialog__title">Let's chat...</h2>
             <label for="name" class="dialog__label">
               <span>Name</span>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="name" autocomplete="name" required />
             </label>
             <label for="email" class="dialog__label">
               <span>Email</span>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" autocomplete="email" required />
             </label>
             <label for="message" class="dialog__label">
               <span>Message</span>
@@ -361,7 +361,7 @@ main {
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.8125rem;
     font-weight: 800;
     color: $primary;
     margin-top: .5rem;
@@ -395,6 +395,10 @@ main {
       padding: 0.8125rem 1rem;
       border: 1px solid $gray-slate-light;
       border-radius: 0.25rem;
+    }
+    textarea {
+      resize: none;
+      height: 100px;
     }
 
     button {
