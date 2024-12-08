@@ -114,6 +114,9 @@ const closeDialog = () => {
   --color-secondary-light: rgba(139, 67, 34, 1);
   --color-alternate: rgba(167, 127, 88, 1);
   --color-alternate-light: rgba(195, 150, 106, 1);
+  --ring-offset-shadow: 0 0 #0000;
+  --ring-shadow: 0 0 #0000;
+  --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 // Font Face
@@ -454,6 +457,8 @@ dialog[open] {
   opacity: 1;
   transform: scaleY(1);
   padding: 0;
+  border:none;
+  box-shadow: var(--ring-offset-shadow,0 0 #0000),var(--ring-shadow,0 0 #0000),var(--shadow);
 }
 
 /*   Closed state of the dialog   */
@@ -486,7 +491,7 @@ dialog::backdrop {
 }
 
 dialog[open]::backdrop {
-  background-color: rgb(0 0 0 / 70%);
+  background-color: rgb(0 0 0 / 50%);
 }
 
 /* This starting-style rule cannot be nested inside the above selector
