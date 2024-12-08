@@ -25,15 +25,15 @@
             <input type="hidden" name="subject" :value="`A new message from ${contactName}`" />
             <label for="name" class="dialog__label">
               <span>Name</span>
-              <input type="text" id="name" name="name" v-model="contactName" required />
+              <input type="text" id="name" name="name" required />
             </label>
             <label for="email" class="dialog__label">
               <span>Email</span>
-              <input type="email" id="email" name="email" v-model="contactEmail" required />
+              <input type="email" id="email" name="email" required />
             </label>
             <label for="message" class="dialog__label">
               <span>Message</span>
-              <textarea id="message" name="message" v-model="contactMessage" required></textarea>
+              <textarea id="message" name="message" required></textarea>
             </label>
             <div class="dialog__buttons">
               <button type="submit">Submit</button>
@@ -73,16 +73,6 @@ const bio = ref(
 );
 const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
 const dialog = ref(null);
-const contactName = ref("");
-const contactEmail = ref("");
-const contactMessage = ref("");
-
-const resetForm = () => {
-  contactName.value = "";
-  contactEmail.value = "";
-  contactMessage.value = "";
-};
-
 
 useHead({
   title: name.value + " | " + title.value,
@@ -109,7 +99,6 @@ const openDialog = () => {
 
 const closeDialog = () => {
   dialog.value.close();
-  resetForm();
 };
 </script>
 
