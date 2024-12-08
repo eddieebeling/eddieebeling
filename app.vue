@@ -20,23 +20,25 @@
           <button class="section__cta" @click="openDialog">Contact me</button>
         </section>
         <dialog ref="dialog" class="dialog">
-          <form class="dialog__form" name="contact" method="POST" data-netlify="true">
-            <h2 class="dialog__title">Let's chat...</h2>
+          <form name="contact" method="POST" data-netlify="true" class="dialog__form">
+            <a @click="closeDialog" class="dialog__close">
+              <font-awesome :icon="faXmark" />
+            </a>
+            <h2 class="dialog__title">Contact Me</h2>
             <label for="name" class="dialog__label">
               <span>Name</span>
-              <input type="text" id="name" name="name" autocomplete="name" required />
+              <input type="text" id="name" name="name" required />
             </label>
             <label for="email" class="dialog__label">
               <span>Email</span>
-              <input type="email" id="email" name="email" autocomplete="email" required />
+              <input type="email" id="email" name="email" required />
             </label>
             <label for="message" class="dialog__label">
               <span>Message</span>
               <textarea id="message" name="message" required></textarea>
             </label>
-            <div class="dialog__buttons">
-              <button type="submit">Submit</button>
-              <button type="button" @click="closeDialog" class="secondary">Cancel</button>
+            <div>
+              <button type="submit">Send</button>
             </div>
           </form>
         </dialog>
@@ -57,6 +59,7 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const name = ref("Eddie Ebeling");
 const title = ref("UI/UX and Front End Developer");
@@ -361,7 +364,7 @@ main {
   }
 
   &__title {
-    font-size: 1.8125rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: $primary;
     margin-top: .5rem;
@@ -395,12 +398,6 @@ main {
       padding: 0.8125rem 1rem;
       border: 1px solid $gray-slate-light;
       border-radius: 0.25rem;
-      font-family: $font-sans;
-      color: $gray-slate;
-    }
-    textarea {
-      resize: none;
-      height: 100px;
     }
 
     button {
@@ -418,20 +415,6 @@ main {
 
       &:hover {
         background: $alternate-light;
-      }
-    }
-  }
-
-  &__buttons {
-    display: flex;
-
-    .secondary {
-      background: transparent;
-      color: $alternate;
-
-      &:hover {
-        background: transparent;
-        color: $alternate-light;
       }
     }
   }
