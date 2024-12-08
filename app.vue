@@ -20,7 +20,7 @@
           <button class="section__cta" @click="openDialog">Contact me</button>
         </section>
         <dialog ref="dialog" class="dialog">
-          <form name="contact" method="POST" data-netlify="true" class="dialog__form">
+          <form name="contact" method="POST" class="dialog__form" netlify>
             <h2 class="dialog__title">Let's chat...</h2>
             <label for="name" class="dialog__label">
               <span>Name</span>
