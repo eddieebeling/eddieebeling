@@ -21,21 +21,23 @@
         </section>
         <dialog ref="dialog" class="dialog">
           <form name="contact" method="POST" data-netlify="true" class="dialog__form">
-            <h2 class="dialog__title">Contact Me</h2>
+            <h2 class="dialog__title">Let's chat...</h2>
+            <input type="hidden" name="subject" :value="`A new message from ${contactName}`" />
             <label for="name" class="dialog__label">
               <span>Name</span>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="name" v-model="contactName" required />
             </label>
             <label for="email" class="dialog__label">
               <span>Email</span>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" v-model="contactEmail" required />
             </label>
             <label for="message" class="dialog__label">
               <span>Message</span>
-              <textarea id="message" name="message" required></textarea>
+              <textarea id="message" name="message" v-model="contactMessage" required></textarea>
             </label>
-            <div>
-              <button type="submit">Send</button>
+            <div class="dialog__buttons">
+              <button type="submit">Submit</button>
+              <button type="button" @click="closeDialog" class="secondary">Cancel</button>
             </div>
           </form>
         </dialog>
@@ -71,6 +73,16 @@ const bio = ref(
 );
 const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
 const dialog = ref(null);
+const contactName = ref("");
+const contactEmail = ref("");
+const contactMessage = ref("");
+
+const resetForm = () => {
+  contactName.value = "";
+  contactEmail.value = "";
+  contactMessage.value = "";
+};
+
 
 useHead({
   title: name.value + " | " + title.value,
@@ -97,6 +109,7 @@ const openDialog = () => {
 
 const closeDialog = () => {
   dialog.value.close();
+  resetForm();
 };
 </script>
 
@@ -395,6 +408,12 @@ main {
       padding: 0.8125rem 1rem;
       border: 1px solid $gray-slate-light;
       border-radius: 0.25rem;
+      font-family: $font-sans;
+      color: $gray-slate;
+    }
+    textarea {
+      resize: none;
+      height: 100px;
     }
 
     button {
@@ -412,6 +431,20 @@ main {
 
       &:hover {
         background: $alternate-light;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    .secondary {
+      background: transparent;
+      color: $alternate;
+
+      &:hover {
+        background: transparent;
+        color: $alternate-light;
       }
     }
   }
