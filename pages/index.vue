@@ -52,23 +52,15 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const name = ref("Eddie Ebeling");
 const title = ref("UI/UX and Front End Developer");
+const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
 const socialLinks = ref([
 	{ platform: "Instagram", url: "https://instagram.com/eddieebeling" },
 	{ platform: "Linkedin", url: "https://linkedin.com/in/eddieebeling" },
 	{ platform: "Github", url: "https://github.com/eddieebeling" },
 	{ platform: "Codepen", url: "https://codepen.io/eddieebeling" },
 ]);
-const bio = ref(
-	"Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications."
-);
-const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
+
 const dialog = ref(null);
-
-const openDialog = () => {
-	dialog.value.showModal();
-};
-
-const closeDialog = () => {
-	dialog.value.close();
-};
+const openDialog = () => dialog.value.showModal();
+const closeDialog = () => dialog.value.close();
 </script>

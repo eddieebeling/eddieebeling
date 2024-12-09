@@ -17,7 +17,6 @@ const bio = ref(
 	"Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications."
 );
 const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
-const dialog = ref(null);
 
 useHead({
 	title: name.value + " | " + title.value,
@@ -406,13 +405,10 @@ dialog {
 	transform: scaleY(0);
 	transition: opacity 0.2s ease-out, transform 0.2s ease-out,
 		overlay 0.2s ease-out allow-discrete, display 0.2s ease-out allow-discrete;
-	/* Equivalent to
-  transition: all 0.7s allow-discrete; */
+	padding: 0;
 }
 
 /*   Before-open state  */
-/* Needs to be after the previous dialog[open] rule to take effect,
-    as the specificity is the same */
 @starting-style {
 	dialog[open] {
 		opacity: 0;
@@ -424,9 +420,7 @@ dialog {
 dialog::backdrop {
 	background-color: rgb(0 0 0 / 0%);
 	transition: display 0.2s allow-discrete, overlay 0.2s allow-discrete,
-		background-color 0.2s;
-	/* Equivalent to
-  transition: all 0.7s allow-discrete; */
+	background-color 0.2s;
 }
 
 dialog[open]::backdrop {
@@ -435,7 +429,6 @@ dialog[open]::backdrop {
 
 /* This starting-style rule cannot be nested inside the above selector
 because the nesting selector cannot represent pseudo-elements. */
-
 @starting-style {
 	dialog[open]::backdrop {
 		background-color: rgb(0 0 0 / 0%);
