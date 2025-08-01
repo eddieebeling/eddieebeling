@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@vesp/nuxt-fontawesome": "^2.0.0",
-    "node-check-updates": "^0.1.9",
-    "npm": "^11.5.2",
     "nuxt": "^4.0.2",
     "nuxt-gtag": "^3.0.3",
     "vite": "^7.0.6",
