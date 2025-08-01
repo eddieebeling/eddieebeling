@@ -96,6 +96,16 @@ body {
 	color: $gray-dark;
 }
 
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
 #__nuxt {
 	height: 100%;
 	position: relative;
@@ -245,6 +255,7 @@ main {
 	margin: 0;
 	animation: fadein 0.5s;
 	display: none;
+	position: relative;
 
 	@media (min-width: 961px) {
 		display: flex;
