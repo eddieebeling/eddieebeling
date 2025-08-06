@@ -45,7 +45,7 @@ useSeoMeta({
 	--color-gray-slate: rgb(103, 115, 128);
 	--color-gray-slate-light: rgb(146, 167, 189);
 	--color-gray-dark: #1b1b1b;
-	--color-primary: rgba(36, 57, 80, 1);
+	--color-primary: #243950;
 	--color-primary-dark: rgba(19, 33, 48, 1);
 	--color-secondary: rgba(105, 47, 12, 1);
 	--color-secondary-light: rgba(139, 67, 34, 1);

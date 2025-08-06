@@ -1,0 +1,19 @@
+{
+  "color": {
+    "content": {
+      "brand": {
+        "value": "{color.brand.blue.800}"
+      }
+    },
+    "background": {
+      "brand": {
+        "value": "{color.brand.brown.100}"
+      }
+    },
+    "border": {
+      "brand": {
+        "value": "{color.brand.blue.200}"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "button": {
+    "color": {
+      "content": {
+        "value": "{color.brand.brown.100}"
+      },
+      "background": {
+        "value": "{color.brand.brown.600}"
+      },
+      "border": {
+        "value": "{color.brand.brown.600}"
+      }
+    }
+  }
+}
