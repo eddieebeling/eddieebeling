@@ -26,6 +26,10 @@ useHead({
 			rel: "stylesheet",
 			href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap",
 		},
+		{
+			rel: "stylesheet",
+			href: "/css/_variables.css",
+		},
 	],
 });
 
@@ -41,16 +45,6 @@ useSeoMeta({
 <style lang="scss">
 // CSS Custom Properties
 :root {
-	--color-gray-light: #f7f7f7;
-	--color-gray-slate: rgb(103, 115, 128);
-	--color-gray-slate-light: rgb(146, 167, 189);
-	--color-gray-dark: #1b1b1b;
-	--color-primary: #243950;
-	--color-primary-dark: rgba(19, 33, 48, 1);
-	--color-secondary: rgba(105, 47, 12, 1);
-	--color-secondary-light: rgba(139, 67, 34, 1);
-	--color-alternate: rgba(167, 127, 88, 1);
-	--color-alternate-light: rgba(195, 150, 106, 1);
 	--ring-offset-shadow: 0 0 #0000;
 	--ring-shadow: 0 0 #0000;
 	--shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -58,18 +52,6 @@ useSeoMeta({
 
 // Font Face
 $font-sans: "Montserrat", sans-serif;
-
-// Color Variables
-$gray-light: var(--color-gray-light);
-$gray-slate: var(--color-gray-slate);
-$gray-slate-light: var(--color-gray-slate-light);
-$gray-dark: var(--color-gray-dark);
-$primary: var(--color-primary);
-$primary-dark: var(--color-primary-dark);
-$secondary: var(--color-secondary);
-$secondary-light: var(--color-secondary-light);
-$alternate: var(--color-alternate);
-$alternate-light: var(--color-alternate-light);
 
 // Keyframes
 @keyframes fadein {
@@ -93,7 +75,18 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	color: $gray-dark;
+	color: var(--ee-theme-color-content-brand);
+	background: var(--ee-theme-color-background-subtle);
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }
 
 #__nuxt {
@@ -122,8 +115,7 @@ main {
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	color: $gray-dark;
+	align-items: center;;
 	padding: 0 1rem;
 
 	@media (min-width: 961px) {
@@ -142,8 +134,6 @@ main {
 	}
 
 	&__img {
-		background: #f7f7f7;
-		animation: fadein 0.5s;
 		width: 240px;
 		height: 360px;
 		clip-path: circle(30% at 50% 35%);
@@ -162,7 +152,7 @@ main {
 		height: 60px;
 
 		a {
-			color: $secondary;
+			color: var(--ee-theme-color-icon-default);
 			padding: 1rem;
 			animation: fadein 0.5s;
 			transition: all 0.2s linear;
@@ -170,7 +160,7 @@ main {
 		}
 
 		a:hover {
-			color: $secondary-light;
+			color: var(--ee-theme-color-icon-default-hover);
 			transform: scale(1.12);
 		}
 	}
@@ -180,7 +170,7 @@ main {
 		font-weight: 800;
 		line-height: 1.5;
 		margin: 0;
-		color: $primary;
+		color: var(--ee-theme-color-content-brand);
 		text-align: center;
 
 		@media (min-width: 961px) {
@@ -195,7 +185,7 @@ main {
 		font-weight: 300;
 		line-height: 1.2;
 		margin: 0;
-		color: rgba(124, 134, 144, 1);
+		color: var(--ee-theme-color-content-subtle);
 		text-align: center;
 
 		@media (min-width: 961px) {
@@ -208,8 +198,8 @@ main {
 	padding: 1rem 0;
 
 	&__cta {
-		background: transparent;
-		color: $alternate;
+		background: var(--ee-theme-button-color-background-default);
+		color: var(--ee-theme-button-color-content-default);
 		border: none;
 		padding: 1rem 2rem;
 		font-size: 1.125rem;
@@ -217,7 +207,7 @@ main {
 		margin: 1rem 0;
 		cursor: pointer;
 		transition: all 0.2s linear;
-		border: solid 2px $alternate;
+		border: solid 2px var(--ee-theme-button-color-border-default);
 		border-radius: 0.3125rem;
 
 		&::after {
@@ -227,7 +217,8 @@ main {
 		}
 
 		&:hover {
-			background: $alternate;
+			background: var(--ee-theme-button-color-background-hover);
+			border: solid 2px var(--ee-theme-button-color-border-hover);
 			color: white;
 
 			&::after {
@@ -238,13 +229,12 @@ main {
 }
 
 .portrait {
-	transition: background 0.3s ease-in 0.2s;
-	background: #f7f7f7;
 	height: 100%;
 	width: 45%;
 	margin: 0;
 	animation: fadein 0.5s;
 	display: none;
+	position: relative;
 
 	@media (min-width: 961px) {
 		display: flex;
@@ -259,50 +249,50 @@ main {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background: $primary-dark;
+		// background: $primary-dark;
 	}
 
 	.header {
 		h1 {
-			color: $gray-light;
+			// color: $gray-light;
 		}
 
 		h2 {
-			color: $gray-slate-light;
+			// color: $gray-slate-light;
 		}
 
 		&__social-links {
 			a {
-				color: $alternate-light;
+				// color: $alternate-light;
 			}
 
 			a:hover {
-				color: $alternate;
+				// color: $alternate;
 			}
 		}
 	}
 
 	.dialog {
 		&__form {
-			background: $gray-dark !important;
-			color: $gray-light;
+			// background: $gray-dark !important;
+			// color: $gray-light;
 
 			input,
 			textarea {
-				background: #2b2b2b;
-				color: $gray-light;
-				border: solid 1px $gray-slate-light;
+				// background: #2b2b2b;
+				// color: $gray-light;
+				// border: solid 1px $gray-slate-light;
 			}
 
 			button {
-				background: $primary !important;
-				color: $gray-dark;
+				// background: $primary !important;
+				// color: $gray-dark;
 			}
 		}
 
 		&__label {
 			span {
-				color: $gray-slate !important;
+				// color: $gray-slate !important;
 			}
 		}
 	}
@@ -319,19 +309,19 @@ main {
 		right: 1rem;
 		font-size: 1.5rem;
 		cursor: pointer;
-		color: $gray-slate;
+		color: var(--ee-theme-color-content-subtle);
 		transition: all 0.2s linear;
 		z-index: 999;
 
 		&:hover {
-			color: $gray-slate-light;
+			color: var(--ee-theme-color-content-brand);
 		}
 	}
 
 	&__title {
 		font-size: 1.8125rem;
 		font-weight: 800;
-		color: $primary;
+		color: var(--ee-theme-color-content-brand);
 		margin-top: 0.5rem;
 		margin-bottom: 0;
 	}
@@ -346,7 +336,7 @@ main {
 		flex-direction: column;
 		gap: 1rem;
 		padding: 2.5rem;
-		background: white;
+		background: var(--ee-theme-color-background);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		margin: 0 auto;
 		position: relative;
@@ -354,13 +344,13 @@ main {
 		span {
 			font-size: 0.875rem;
 			margin-bottom: 0.25rem;
-			color: $primary;
+			color: var(--ee-theme-color-content-subtle);
 		}
 
 		input,
 		textarea {
 			padding: 0.8125rem 1rem;
-			border: 1px solid $gray-slate-light;
+			border: 1px solid var(--ee-theme-color-border-default);
 			border-radius: 0.25rem;
 		}
 
@@ -371,8 +361,8 @@ main {
 		}
 
 		button {
-			background: $alternate;
-			color: white;
+			background: var(--ee-theme-button-primary-color-background-default);
+			color: var(--ee-theme-button-primary-color-content-default);
 			border: none;
 			padding: 1rem 2rem;
 			font-size: 1.125rem;
@@ -382,9 +372,11 @@ main {
 			transition: all 0.2s linear;
 			border-radius: 0.3125rem;
 			width: 100%;
+			border: solid 2px var(--ee-theme-button-primary-color-border-default);
 
 			&:hover {
-				background: $alternate-light;
+				background: var(--ee-theme-button-primary-color-background-hover);
+				color: white;
 			}
 		}
 	}
@@ -418,20 +410,20 @@ dialog {
 
 /* Transition the :backdrop when the dialog modal is promoted to the top layer */
 dialog::backdrop {
-	background-color: rgb(0 0 0 / 0%);
+	background-color: var(--ee-theme-color-background-overlay-light);
 	transition: display 0.2s allow-discrete, overlay 0.2s allow-discrete,
 	background-color 0.2s;
 }
 
 dialog[open]::backdrop {
-	background-color: rgb(0 0 0 / 50%);
+	background-color: var(--ee-theme-color-background-overlay-dark);
 }
 
 /* This starting-style rule cannot be nested inside the above selector
 because the nesting selector cannot represent pseudo-elements. */
 @starting-style {
 	dialog[open]::backdrop {
-		background-color: rgb(0 0 0 / 0%);
+		background-color: var(--ee-theme-color-background-overlay-light);
 	}
 }
 </style>

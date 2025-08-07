@@ -25,7 +25,7 @@ export default {
     "css": {
       "prefix": "ee",
       "transformGroup": "css",
-      "buildPath": "build/css/",
+      "buildPath": "public/css/",
       "files": [
         {
           "destination": "_variables.css",

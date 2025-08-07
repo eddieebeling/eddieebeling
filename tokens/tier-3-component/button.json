@@ -1,14 +1,93 @@
 {
   "button": {
     "color": {
-      "content": {
-        "value": "{color.brand.brown.100}"
-      },
       "background": {
-        "value": "{color.brand.brown.600}"
+        "default": {
+          "value": "{color.brand.brown.100}"
+        },
+        "hover": {
+          "value": "{color.brand.brown.700}"
+        },
+        "active": {
+          "value": "{color.brand.brown.800}"
+        },
+        "disabled": {
+          "value": "{color.neutral.300}"
+        }
+      },
+      "content": {
+        "default": {
+          "value": "{color.brand.brown.800}"
+        },
+        "hover": {
+          "value": "{color.neutral.white}"
+        },
+        "active": {
+          "value": "{color.neutral.white}"
+        },
+        "disabled": {
+          "value": "{color.neutral.600}"
+        }
       },
       "border": {
-        "value": "{color.brand.brown.600}"
+        "default": {
+          "value": "{color.brand.brown.700}"
+        },
+        "hover": {
+          "value": "{color.brand.brown.700}"
+        },
+        "active": {
+          "value": "{color.brand.brown.800}"
+        },
+        "disabled": {
+          "value": "{color.neutral.300}"
+        }
+      }
+    },
+    "primary": {
+      "color": {
+        "background": {
+          "default": {
+            "value": "{color.brand.blue.600}"
+          },
+          "hover": {
+            "value": "{color.brand.blue.800}"
+          },
+          "active": {
+            "value": "{color.brand.blue.900}"
+          },
+          "disabled": {
+            "value": "{color.neutral.400}"
+          }
+        },
+        "content": {
+          "default": {
+            "value": "{color.neutral.white}"
+          },
+          "hover": {
+            "value": "{color.neutral.white}"
+          },
+          "active": {
+            "value": "{color.neutral.white}"
+          },
+          "disabled": {
+            "value": "{color.neutral.700}"
+          }
+        },
+        "border": {
+          "default": {
+            "value": "{color.brand.blue.600}"
+          },
+          "hover": {
+            "value": "{color.brand.blue.700}"
+          },
+          "active": {
+            "value": "{color.brand.blue.700}"
+          },
+          "disabled": {
+            "value": "{color.neutral.400}"
+          }
+        }
       }
     }
   }
