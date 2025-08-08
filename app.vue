@@ -288,13 +288,14 @@ main {
 
 	.dialog {
 		&__form {
-			background: var(--ee-theme-color-content-default) !important;
+			background: var(--ee-color-neutral-black) !important;
 			color: var(--ee-theme-color-content-subtle);
 
 			input,
 			textarea {
 				background: var(--ee-color-neutral-900);
 				color: var(--ee-color-neutral-300);
+				border: solid 1px var(--ee-color-neutral-800);
 			}
 		}
 
@@ -317,12 +318,12 @@ main {
 		right: 1rem;
 		font-size: 1.5rem;
 		cursor: pointer;
-		color: var(--ee-theme-color-content-subtle);
+		color: var(--ee-theme-color-icon-subtle);
 		transition: all 0.2s linear;
 		z-index: 999;
 
 		&:hover {
-			color: var(--ee-theme-color-content-brand);
+			color: var(--ee-theme-color-icon-knockout);
 		}
 	}
 

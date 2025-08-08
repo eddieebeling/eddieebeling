@@ -108,16 +108,16 @@
   --ee-theme-button-color-border-hover: #8b6547;
   --ee-theme-button-color-border-active: #704b36;
   --ee-theme-button-color-border-disabled: #cccccc;
-  --ee-theme-button-primary-color-background-default: #8a9cb1;
-  --ee-theme-button-primary-color-background-hover: #6b829d;
-  --ee-theme-button-primary-color-background-active: #4c6889;
+  --ee-theme-button-primary-color-background-default: #3c546f;
+  --ee-theme-button-primary-color-background-hover: #30465e;
+  --ee-theme-button-primary-color-background-active: #243950;
   --ee-theme-button-primary-color-background-disabled: #b3b3b3;
   --ee-theme-button-primary-color-content-default: #ffffff;
   --ee-theme-button-primary-color-content-hover: #ffffff;
   --ee-theme-button-primary-color-content-active: #ffffff;
   --ee-theme-button-primary-color-content-disabled: #666666;
-  --ee-theme-button-primary-color-border-default: #8a9cb1;
-  --ee-theme-button-primary-color-border-hover: #6b829d;
-  --ee-theme-button-primary-color-border-active: #4c6889;
+  --ee-theme-button-primary-color-border-default: #3c546f;
+  --ee-theme-button-primary-color-border-hover: #30465e;
+  --ee-theme-button-primary-color-border-active: #243950;
   --ee-theme-button-primary-color-border-disabled: #b3b3b3;
 }
