@@ -249,25 +249,27 @@ main {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		// background: $primary-dark;
+		background: var(--ee-theme-color-background-brand-knockout);
 	}
 
 	.header {
 		h1 {
-			// color: $gray-light;
+			color: var(--ee-theme-color-content-knockout);
 		}
 
 		h2 {
-			// color: $gray-slate-light;
+			color: var(--ee-theme-color-content-subtle);
 		}
 
 		&__social-links {
 			a {
 				// color: $alternate-light;
+				color: var(--ee-theme-color-icon-brand);
 			}
 
 			a:hover {
 				// color: $alternate;
+				color: var(--ee-theme-color-icon-brand-hover);
 			}
 		}
 	}

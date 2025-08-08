@@ -68,13 +68,13 @@
         "value": "{color.brand.blue.200}"
       },
       "knockout": {
-        "value": "{color.brand.brown.900}"
+        "value": "{color.brand.brown.100}"
       },
       "brand": {
-        "value": "{color.brand.blue.800}"
+        "value": "{color.brand.blue.200}"
       },
       "brand-hover": {
-        "value": "{color.brand.blue.700}"
+        "value": "{color.neutral.white}"
       }
     }
   }
