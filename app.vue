@@ -252,6 +252,20 @@ main {
 		background: var(--ee-theme-color-background-brand-knockout);
 	}
 
+	.section {
+		&__cta {
+			background: var(--ee-theme-button-primary-color-background-default);
+			border: solid 2px var(--ee-theme-button-primary-color-border-default);
+			color: var(--ee-theme-button-primary-color-content-default);
+
+			&:hover {
+				background: var(--ee-theme-button-primary-color-background-hover);
+				border: solid 2px var(--ee-theme-button-primary-color-border-hover);
+				color: white;
+			}
+		}
+	}
+
 	.header {
 		h1 {
 			color: var(--ee-theme-color-content-knockout);
@@ -263,12 +277,10 @@ main {
 
 		&__social-links {
 			a {
-				// color: $alternate-light;
 				color: var(--ee-theme-color-icon-brand);
 			}
 
 			a:hover {
-				// color: $alternate;
 				color: var(--ee-theme-color-icon-brand-hover);
 			}
 		}
@@ -276,25 +288,19 @@ main {
 
 	.dialog {
 		&__form {
-			// background: $gray-dark !important;
-			// color: $gray-light;
+			background: var(--ee-theme-color-content-default) !important;
+			color: var(--ee-theme-color-content-subtle);
 
 			input,
 			textarea {
-				// background: #2b2b2b;
-				// color: $gray-light;
-				// border: solid 1px $gray-slate-light;
-			}
-
-			button {
-				// background: $primary !important;
-				// color: $gray-dark;
+				background: var(--ee-color-neutral-900);
+				color: var(--ee-color-neutral-300);
 			}
 		}
 
 		&__label {
 			span {
-				// color: $gray-slate !important;
+				color: var(--ee-theme-color-content-subtle)
 			}
 		}
 	}
