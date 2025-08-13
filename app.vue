@@ -76,6 +76,24 @@ $ee-bp-xxl: 87.5rem; // 1600px
   }
 }
 
+@mixin ee-theme-typography-headline() {
+	font-family: var(--ee-theme-typography-headline-mobile-font-family);
+	font-weight: var(--ee-theme-typography-headline-mobile-font-weight);
+	font-size: var(--ee-theme-typography-headline-mobile-font-size);
+	line-height: var(--ee-theme-typography-headline-mobile-line-height);
+	letter-spacing: var(--ee-theme-typography-headline-mobile-letter-spacing);
+	text-transform: var(--ee-theme-typography-headline-mobile-text-transform);
+
+	@media all and (min-width: $ee-bp-lg) {
+		font-family: var(--ee-theme-typography-headline-font-family);
+		font-weight: var(--ee-theme-typography-headline-font-weight);
+		font-size: var(--ee-theme-typography-headline-font-size);
+		line-height: var(--ee-theme-typography-headline-line-height);
+		letter-spacing: var(--ee-theme-typography-headline-letter-spacing);
+		text-transform: var(--ee-theme-typography-headline-text-transform);
+	}
+}
+
 
 // Keyframes
 @keyframes fadein {
@@ -338,11 +356,12 @@ main {
 	}
 
 	&__title {
-		font-size: 1.8125rem;
-		font-weight: 800;
-		color: var(--ee-theme-color-content-brand);
-		margin-top: 0.5rem;
-		margin-bottom: 0;
+		@include ee-theme-typography-headline();
+		& {
+			color: var(--ee-theme-color-content-brand);
+			margin-top: 0.5rem;
+			margin-bottom: 0;
+		}
 	}
 
 	&__label {
