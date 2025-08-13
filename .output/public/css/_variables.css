@@ -136,6 +136,12 @@
   --ee-theme-typography-display-default-line-height: 1.25;
   --ee-theme-typography-display-default-letter-spacing: -2px;
   --ee-theme-typography-display-default-text-transform: none;
+  --ee-theme-typography-display-default-mobile-font-family: Montserrat, sans-serif;
+  --ee-theme-typography-display-default-mobile-font-size: 2rem;
+  --ee-theme-typography-display-default-mobile-font-weight: 800;
+  --ee-theme-typography-display-default-mobile-line-height: 1.25;
+  --ee-theme-typography-display-default-mobile-letter-spacing: -1.5px;
+  --ee-theme-typography-display-default-mobile-text-transform: none;
   --ee-theme-button-color-background-default: #f1e8e0;
   --ee-theme-button-color-background-hover: #8b6547;
   --ee-theme-button-color-background-active: #704b36;

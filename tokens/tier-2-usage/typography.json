@@ -20,7 +20,7 @@
                 "value": "{typography.text-transform.none}"
             }
         },
-        "display-mobile": {
+        "display-default-mobile": {
             "font-family": {
                 "value": "{typography.font-family.montserrat}"
             },
