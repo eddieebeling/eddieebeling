@@ -90,9 +90,4 @@ sw.*
 *.swp
 
 # Output
-/.output
-.output/public/_nuxt/builds/latest.json
-.output/nitro.json
-.output/public/_nuxt/builds/latest.json
-.output/public/css/_variables.css
-.output/server/chunks/nitro/nitro.mjs
+.output/**

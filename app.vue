@@ -59,22 +59,23 @@ $ee-bp-xxl: 87.5rem; // 1600px
 
 // Typography (composite tokens)
 @mixin ee-theme-typography-display-default() {
-	font-family: var(--ee-theme-typography-display-default-mobile-font-family);
-	font-weight: var(--ee-theme-typography-display-default-mobile-font-weight);
-	font-size: var(--ee-theme-typography-display-default-mobile-font-size);
-	line-height: var(--ee-theme-typography-display-default-mobile-line-height);
-	letter-spacing: var(--ee-theme-typography-display-default-mobile-letter-spacing);
-	text-transform: var(--ee-theme-typography-display-default-mobile-text-transform);
+    font-family: var(--ee-theme-typography-display-default-mobile-font-family);
+    font-weight: var(--ee-theme-typography-display-default-mobile-font-weight);
+    font-size: var(--ee-theme-typography-display-default-mobile-font-size);
+    line-height: var(--ee-theme-typography-display-default-mobile-line-height);
+    letter-spacing: var(--ee-theme-typography-display-default-mobile-letter-spacing);
+    text-transform: var(--ee-theme-typography-display-default-mobile-text-transform);
 
-	@media all and (min-width: $ee-bp-lg) {
-		font-family: var(--ee-theme-typography-display-default-font-family);
-		font-weight: var(--ee-theme-typography-display-default-font-weight);
-		font-size: var(--ee-theme-typography-display-default-font-size);
-		line-height: var(--ee-theme-typography-display-default-line-height);
-		letter-spacing: var(--ee-theme-typography-display-default-letter-spacing);
-		text-transform: var(--ee-theme-typography-display-default-text-transform);
-	}
+  @media all and (min-width: $ee-bp-lg) {
+      font-family: var(--ee-theme-typography-display-default-font-family);
+      font-weight: var(--ee-theme-typography-display-default-font-weight);
+      font-size: var(--ee-theme-typography-display-default-font-size);
+      line-height: var(--ee-theme-typography-display-default-line-height);
+      letter-spacing: var(--ee-theme-typography-display-default-letter-spacing);
+      text-transform: var(--ee-theme-typography-display-default-text-transform);
+  }
 }
+
 
 // Keyframes
 @keyframes fadein {
@@ -183,8 +184,10 @@ main {
 
 	&__name {
 		@include ee-theme-typography-display-default();
-		color: var(--ee-theme-color-content-brand);
-		margin: 0;
+		& {
+			color: var(--ee-theme-color-content-brand);
+			margin: 0;
+		}
 	}
 
 	&__title {
