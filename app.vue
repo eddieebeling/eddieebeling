@@ -50,6 +50,11 @@ useSeoMeta({
 	--shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+// Sizing
+@function size($number) {
+	@return calc(0.5rem * #{$number})
+}
+
 // Breakpoints
 $ee-bp-sm: 23.4375rem; // 375px
 $ee-bp-md: 48rem; // 768px
@@ -229,14 +234,14 @@ main {
 		background: var(--ee-theme-button-color-background-default);
 		color: var(--ee-theme-button-color-content-default);
 		border: none;
-		padding: 1rem 2rem;
+		padding: size(2) size(4);
 		font-size: 1.125rem;
 		font-weight: 800;
 		margin: 1rem 0;
 		cursor: pointer;
 		transition: all 0.2s linear;
-		border: solid 2px var(--ee-theme-button-color-border-default);
-		border-radius: 0.3125rem;
+		border: solid var(--ee-theme-border-width-md) var(--ee-theme-button-color-border-default);
+		border-radius: var(--ee-theme-border-radius-md);
 
 		&::after {
 			content: "😀";
@@ -402,15 +407,15 @@ main {
 			background: var(--ee-theme-button-primary-color-background-default);
 			color: var(--ee-theme-button-primary-color-content-default);
 			border: none;
-			padding: 1rem 2rem;
+			padding: size(2) size(4);
 			font-size: 1.125rem;
 			font-weight: 800;
 			margin: 0.5rem 0 0 0;
 			cursor: pointer;
 			transition: all 0.2s linear;
-			border-radius: 0.3125rem;
+			border-radius: var(--ee-theme-border-radius-md);
 			width: 100%;
-			border: solid 2px var(--ee-theme-button-primary-color-border-default);
+			border: solid  var(--ee-theme-border-width-md) var(--ee-theme-button-primary-color-border-default);
 
 			&:hover {
 				background: var(--ee-theme-button-primary-color-background-hover);
