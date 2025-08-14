@@ -5,6 +5,7 @@ Creative Technologist and Front End Developer specializing in cross-platform and
 Areas of expertise:
 * HTML, CSS and JavaScript
 * jQuery, AngularJS, Angular 2+, and Vue.js
+* Design Token Systems
 * .NET, Java, & Node
 * Product & app design, rapid prototyping
 * Front end architecture and development
@@ -18,4 +19,4 @@ Related experience:
 
 Complimentary soft skills:
 * Creative problem solving and troubleshooting
-* Verbal communication, team collaboration, mentoring and leadership
+* Verbal communication, team collaboration, mentoring, and leadership
