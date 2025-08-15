@@ -156,7 +156,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;;
-	padding: 0 1rem;
+	padding: 0 size(2);
 
 	@media (min-width: $ee-bp-lg) {
 		width: 55%;
@@ -188,12 +188,11 @@ main {
 		display: flex;
 		align-items: center;
 		font-size: 1.5rem;
-		margin: 0 -0.8rem;
-		height: 60px;
+		margin: 0 -1rem;
 
 		a {
 			color: var(--ee-theme-color-icon-default);
-			padding: 1rem;
+			padding: size(2);
 			animation: fadein 0.5s;
 			transition: all 0.2s linear;
 			text-decoration: none;
@@ -228,7 +227,7 @@ main {
 }
 
 .section {
-	padding: 1rem 0;
+	padding: size(3) 0;
 
 	&__cta {
 		background: var(--ee-theme-button-color-background-default);
@@ -237,7 +236,6 @@ main {
 		padding: size(2) size(4);
 		font-size: 1.125rem;
 		font-weight: 800;
-		margin: 1rem 0;
 		cursor: pointer;
 		transition: all 0.2s linear;
 		border: solid var(--ee-theme-border-width-md) var(--ee-theme-button-color-border-default);
@@ -245,14 +243,14 @@ main {
 
 		&::after {
 			content: "😀";
-			margin-left: 0.5rem;
+			margin-left: size(1);
 			font-size: 1.25rem;
 		}
 
 		&:hover {
 			background: var(--ee-theme-button-color-background-hover);
 			border: solid 2px var(--ee-theme-button-color-border-hover);
-			color: white;
+			color: var(--ee-theme-button-color-content-hover);
 
 			&::after {
 				content: "😉";
@@ -294,7 +292,7 @@ main {
 			&:hover {
 				background: var(--ee-theme-button-primary-color-background-hover);
 				border: solid 2px var(--ee-theme-button-primary-color-border-hover);
-				color: white;
+				color: var(--ee-theme-button-primary-color-content-hover);
 			}
 		}
 	}
@@ -328,7 +326,7 @@ main {
 			textarea {
 				background: var(--ee-color-neutral-900);
 				color: var(--ee-color-neutral-300);
-				border: solid 1px var(--ee-color-neutral-800);
+				border: solid var(--ee-theme-border-width-sm) var(--ee-color-neutral-800);
 			}
 		}
 
@@ -347,8 +345,8 @@ main {
 
 	&__close {
 		position: absolute;
-		top: 1rem;
-		right: 1rem;
+		top: size(3);
+		right: size(3);
 		font-size: 1.5rem;
 		cursor: pointer;
 		color: var(--ee-theme-color-icon-subtle);
@@ -364,8 +362,8 @@ main {
 		@include ee-theme-typography-headline();
 		& {
 			color: var(--ee-theme-color-content-brand);
-			margin-top: 0.5rem;
-			margin-bottom: 0;
+			margin-top: size(1);
+			margin-bottom: size(0);
 		}
 	}
 
@@ -377,8 +375,8 @@ main {
 	&__form {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		padding: 2.5rem;
+		gap: size(2);
+		padding: size(4) size(6) size(6) size(6);
 		background: var(--ee-theme-color-background);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		margin: 0 auto;
@@ -386,15 +384,15 @@ main {
 
 		span {
 			font-size: 0.875rem;
-			margin-bottom: 0.25rem;
+			margin-bottom: size(1);
 			color: var(--ee-theme-color-content-subtle);
 		}
 
 		input,
 		textarea {
-			padding: 0.8125rem 1rem;
-			border: 1px solid var(--ee-theme-color-border-default);
-			border-radius: 0.25rem;
+			padding: size(1.75) size(2);
+			border: solid var(--ee-theme-border-width-sm) var(--ee-theme-color-border-default);
+			border-radius: var(--ee-theme-border-radius-md);
 		}
 
 		textarea {
@@ -406,11 +404,10 @@ main {
 		button {
 			background: var(--ee-theme-button-primary-color-background-default);
 			color: var(--ee-theme-button-primary-color-content-default);
-			border: none;
 			padding: size(2) size(4);
 			font-size: 1.125rem;
 			font-weight: 800;
-			margin: 0.5rem 0 0 0;
+			margin: size(1) 0;
 			cursor: pointer;
 			transition: all 0.2s linear;
 			border-radius: var(--ee-theme-border-radius-md);
@@ -429,8 +426,7 @@ main {
 dialog[open] {
 	opacity: 1;
 	transform: scaleY(1);
-	padding: 0;
-	border: none;
+	padding: size(0);
 	box-shadow: var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow);
 }
 
