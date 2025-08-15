@@ -43,13 +43,6 @@ useSeoMeta({
 </script>
 
 <style lang="scss">
-// CSS Custom Properties
-:root {
-	--ring-offset-shadow: 0 0 #0000;
-	--ring-shadow: 0 0 #0000;
-	--shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
 // Sizing
 @function size($number) {
 	@return calc(0.5rem * #{$number})
@@ -351,7 +344,7 @@ main {
 		cursor: pointer;
 		color: var(--ee-theme-color-icon-subtle);
 		transition: all 0.2s linear;
-		z-index: 999;
+		z-index: var(--ee-z-index-500);
 
 		&:hover {
 			color: var(--ee-theme-color-icon-knockout);
@@ -427,7 +420,8 @@ dialog[open] {
 	opacity: 1;
 	transform: scaleY(1);
 	padding: size(0);
-	box-shadow: var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow);
+	box-shadow: var(--ee-theme-box-shadow-md);
+	border:none;
 }
 
 /*   Closed state of the dialog   */

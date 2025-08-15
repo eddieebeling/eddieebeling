@@ -1,5 +1,5 @@
 :root {
-  --ee-border-radius-0: 0px;
+        --ee-border-radius-0: 0px;
   --ee-border-radius-2: 2px;
   --ee-border-radius-4: 4px;
   --ee-border-radius-8: 8px;
@@ -117,6 +117,16 @@
   --ee-theme-color-icon-knockout: #f1e8e0;
   --ee-theme-color-icon-brand: #c89576;
   --ee-theme-color-icon-brand-hover: #8b6547;
+  --ee-shadow-md-x: 2px;
+  --ee-shadow-md-y: 2px;
+  --ee-shadow-md-blur: 16px;
+  --ee-shadow-md-spread: 0px;
+  --ee-shadow-md-color: #0000000f;
+  --ee-shadow-sm-x: 1px;
+  --ee-shadow-sm-y: 1px;
+  --ee-shadow-sm-blur: 4px;
+  --ee-shadow-sm-spread: 2px;
+  --ee-shadow-sm-color: #00000014;
   --ee-spacing-0: 0px;
   --ee-spacing-4: 4px;
   --ee-spacing-8: 8px;
@@ -187,6 +197,14 @@
   --ee-theme-typography-headline-mobile-line-height: 1.75;
   --ee-theme-typography-headline-mobile-letter-spacing: -1px;
   --ee-theme-typography-headline-mobile-text-transform: none;
+  --ee-z-index-0: 0;
+  --ee-z-index-100: 100;
+  --ee-z-index-200: 200;
+  --ee-z-index-300: 300;
+  --ee-z-index-400: 400;
+  --ee-z-index-500: 500;
+  --ee-z-index-top: 99999;
+  --ee-z-index-bottom: -100;
   --ee-theme-button-color-background-default: #f1e8e0;
   --ee-theme-button-color-background-hover: #8b6547;
   --ee-theme-button-color-background-active: #704b36;
@@ -211,4 +229,6 @@
   --ee-theme-button-primary-color-border-hover: #30465e;
   --ee-theme-button-primary-color-border-active: #243950;
   --ee-theme-button-primary-color-border-disabled: #b3b3b3;
-}
+  --ee-theme-box-shadow-md: 2px 2px 16px 0px #00000029;
+  --ee-theme-box-shadow-sm: 1px 1px 4px 2px #00000014;
+    }
