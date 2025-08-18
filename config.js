@@ -1,5 +1,11 @@
 import StyleDictionary from 'style-dictionary';
-import boxShadowGroups from './tokens/tier-2-usage/shadow.js';
+import fs from 'fs';
+
+// Import JSON file
+const importJsonFile = (filePath) => {
+  const fileContents = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(fileContents);
+};
 
 const isHigherTierToken = (filePath) => {
   return filePath.includes('tier-2-usage') || filePath.includes('tier-3-component');
@@ -18,7 +24,8 @@ StyleDictionary.registerFormat({
       });
 
     // Build box-shadows as CSS custom props
-    Object.entries(boxShadowGroups).forEach(([size, obj]) => {
+    const boxShadowGroups = importJsonFile('./tokens/tier-1-definition/shadows.json') || {};
+    Object.entries(boxShadowGroups['shadow']).forEach(([size, obj]) => {
       const boxShadow = `${obj.x.value} ${obj.y.value} ${obj.blur.value} ${obj.spread.value} ${obj.color.value};`;
       cssVariables.push(`  --${platform.prefix}-theme-box-shadow-${size}: ${boxShadow}`);
     });
