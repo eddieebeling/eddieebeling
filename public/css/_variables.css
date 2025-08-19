@@ -1,5 +1,5 @@
 :root {
-        --ee-border-radius-0: 0px;
+  --ee-border-radius-0: 0px;
   --ee-border-radius-2: 2px;
   --ee-border-radius-4: 4px;
   --ee-border-radius-8: 8px;
@@ -231,4 +231,4 @@
   --ee-theme-button-primary-color-border-disabled: #b3b3b3;
   --ee-theme-box-shadow-md: 2px 2px 16px 0px #0000000f;
   --ee-theme-box-shadow-sm: 1px 1px 4px 2px #00000014;
-    }
+}

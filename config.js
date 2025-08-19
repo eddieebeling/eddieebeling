@@ -7,6 +7,7 @@ const importJsonFile = (filePath) => {
   return JSON.parse(fileContents);
 };
 
+// Check to see if a token is a higher tier token
 const isHigherTierToken = (filePath) => {
   return filePath.includes('tier-2-usage') || filePath.includes('tier-3-component');
 };
@@ -14,14 +15,16 @@ const isHigherTierToken = (filePath) => {
 StyleDictionary.registerFormat({
   name: 'css/custom-variables',
   format: function ({ dictionary, platform }) {
-    const cssVariables = dictionary.allTokens
-      .map(token => {
-        const tokenName = token.name.replace(`${platform.prefix}-`, '');
-        if (isHigherTierToken(token.filePath)) {
-          return `  --${platform.prefix}-theme-${tokenName}: ${token.value};`;
-        }
-        return `  --${platform.prefix}-${tokenName}: ${token.value};`;
-      });
+    const cssVariables = [];
+    dictionary.allTokens.forEach(token => {
+      const tokenName = token.name.replace(`${platform.prefix}-`, '');
+      if (isHigherTierToken(token.filePath)) {
+        cssVariables.push(`  --${platform.prefix}-theme-${tokenName}: ${token.value};`);
+      } else {
+        // TODO: Work to remove Tier 1 Definition Tokens
+        cssVariables.push(`  --${platform.prefix}-${tokenName}: ${token.value};`);
+      }
+    });
 
     // Build box-shadows as CSS custom props
     const boxShadowGroups = importJsonFile('./tokens/tier-1-definition/shadows.json') || {};
@@ -31,8 +34,8 @@ StyleDictionary.registerFormat({
     });
 
     return `:root {
-      ${cssVariables.join('\n')}
-    }`;
+${cssVariables.join('\n')}
+}`;
   }
 });
 
