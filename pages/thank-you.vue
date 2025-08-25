@@ -10,6 +10,7 @@
 
 <script setup>
 const heading = ref("Thank You");
+const title = ref("UI/UX and Front End Developer");
 const message = ref("I'll be in touch as soon as I check my email.");
 const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
 

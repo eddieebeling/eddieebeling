@@ -18,23 +18,37 @@ const bio = ref(
 );
 const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
 const theme = ref("light");
+const savedTheme = ref(null);
 
 onMounted(() => {
+	savedTheme.value = localStorage.getItem("theme");
+
+	// If the user has selected a theme preference, use that
+	if (savedTheme.value && savedTheme.value.length) {
+		theme.value = savedTheme.value;
+		setTimeout(() => {
+			updateTheme(theme.value);
+			return;
+		}, 10);
+	}
+
+	// Otherwise, set theme to the user's system preferences
 	const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-	
 	if (prefersDarkMode.matches) {
 		setTimeout(() => {
 			updateTheme("dark");
 		}, 10);
 	}
 
+	// Listen for changes to the user's system preferences
 	prefersDarkMode.addEventListener("change", (event) => {
 		updateTheme(event.matches ? "dark" : "light");
 	});
 });
 
 const updateTheme = async (newTheme) => {
-	theme.value = newTheme;
+	localStorage.setItem("theme", newTheme);
+	theme.value = localStorage.getItem("theme");
 	document.documentElement.setAttribute("data-theme", theme.value);
 
 	const link = document.querySelector('link[data-theme="tokens"]');
