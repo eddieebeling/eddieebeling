@@ -69,19 +69,8 @@ const emit = defineEmits(['notifyApp'])
 const dialog = ref(null);
 const openDialog = () => dialog.value.showModal();
 const closeDialog = () => dialog.value.close();
-const theme = ref('light');
-
-onMounted(() => {
-	document.documentElement.setAttribute("data-theme", theme.value);
-});
 
 const toggleTheme = (theme) => {
 	emit('notifyApp', theme)
-	document.documentElement.setAttribute("data-theme", theme);
-
-	const link = document.querySelector('link[data-theme="tokens"]');
-	if (link) {
-		link.href = `/css/${theme}/_variables.css`;
-	}
 };
 </script>

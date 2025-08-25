@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const name = ref("Eddie Ebeling");
 const title = ref("UI/UX and Front End Developer");
@@ -17,11 +17,30 @@ const bio = ref(
 	"Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications."
 );
 const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
-
 const theme = ref("light");
+
+onMounted(() => {
+	const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+	
+	if (prefersDarkMode.matches) {
+		setTimeout(() => {
+			updateTheme("dark");
+		}, 0);
+	}
+
+	prefersDarkMode.addEventListener("change", (event) => {
+		updateTheme(event.matches ? "dark" : "light");
+	});
+});
 
 const updateTheme = (newTheme) => {
 	theme.value = newTheme;
+	document.documentElement.setAttribute("data-theme", theme.value);
+
+	const link = document.querySelector('link[data-theme="tokens"]');
+	if (link) {
+		link.href = `/css/${theme.value}/_variables.css`;
+	}
 };
 
 useHead({
@@ -34,7 +53,7 @@ useHead({
 		},
 		{
 			rel: "stylesheet",
-			href: "/css/light/_variables.css",
+			href: `/css/${theme.value}/_variables.css`,
 			"data-theme": "tokens",
 		},
 	],
@@ -210,7 +229,7 @@ main {
 		}
 
 		.contrast & {
-			filter: grayscale(85%);
+			filter: grayscale(90%);
 		}
 	}
 
@@ -346,7 +365,7 @@ main {
 		height: 100%;
 
 		.contrast & {
-			filter: grayscale(85%);
+			filter: grayscale(90%);
 		}
 	}
 }
