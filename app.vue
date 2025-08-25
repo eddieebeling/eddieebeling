@@ -25,7 +25,7 @@ onMounted(() => {
 	if (prefersDarkMode.matches) {
 		setTimeout(() => {
 			updateTheme("dark");
-		}, 0);
+		}, 10);
 	}
 
 	prefersDarkMode.addEventListener("change", (event) => {
@@ -33,13 +33,13 @@ onMounted(() => {
 	});
 });
 
-const updateTheme = (newTheme) => {
+const updateTheme = async (newTheme) => {
 	theme.value = newTheme;
 	document.documentElement.setAttribute("data-theme", theme.value);
 
 	const link = document.querySelector('link[data-theme="tokens"]');
 	if (link) {
-		link.href = `/css/light/_variables.css`;
+		link.href = `/css/${theme.value}/_variables.css`;
 	}
 };
 
@@ -53,7 +53,7 @@ useHead({
 		},
 		{
 			rel: "stylesheet",
-			href: `/css/light/_variables.css`,
+			href: `/css/${theme.value}/_variables.css`,
 			"data-theme": "tokens",
 		},
 	],
@@ -162,6 +162,7 @@ body {
 	margin: 0;
 	color: var(--ee-theme-color-content-default);
 	background: var(--ee-theme-color-background-default);
+	animation: fadein 0.5s;
 }
 
 .sr-only {
@@ -229,7 +230,7 @@ main {
 		}
 
 		.contrast & {
-			filter: grayscale(95%);
+			filter: grayscale(90%);
 		}
 	}
 
@@ -365,7 +366,7 @@ main {
 		height: 100%;
 
 		.contrast & {
-			filter: grayscale(95%);
+			filter: grayscale(90%);
 		}
 	}
 }
