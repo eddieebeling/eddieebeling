@@ -2,13 +2,13 @@
   "color": {
     "content": {
       "default": {
-        "value": "{color.neutral.white}"
+        "value": "{color.neutral.900}"
       },
       "default-hover": {
-        "value": "{color.brand.blue.700}"
+        "value": "{color.neutral.black}"
       },
       "subtle": {
-        "value": "{color.brand.blue.300}"
+        "value": "{color.utility.blue.500}"
       },
       "disabled": {
         "value": "{color.neutral.500}"
@@ -16,13 +16,13 @@
     },
     "background": {
       "default": {
-        "value": "{color.brand.blue.700}"
+        "value": "{color.neutral.white}"
       },
       "subtle": {
-        "value": "{color.brand.brown.100}"
+        "value": "{color.neutral.white}"
       },
       "disabled": {
-        "value": "{color.neutral.200}"
+        "value": "{color.neutral.100}"
       },
       "overlay-light": {
           "value": "{color.transparent.black.250}"
@@ -38,10 +38,10 @@
     },
     "icon": {
       "default": {
-        "value": "{color.brand.brown.400}"
+        "value": "{color.neutral.900}"
       },
       "default-hover": {
-        "value": "{color.brand.brown.500}"
+        "value": "{color.neutral.black}"
       }
     }
   }

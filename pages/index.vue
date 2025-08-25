@@ -15,6 +15,11 @@
 			<section class="section">
 				<button class="section__cta" @click="openDialog">Contact me</button>
 			</section>
+			<nav class="header__theme-toggle">
+				<button @click="toggleTheme('light')" class="header__theme-button light"></button>
+				<button @click="toggleTheme('dark')" class="header__theme-button dark"></button>
+				<button @click="toggleTheme('contrast')" class="header__theme-button contrast"></button>
+			</nav>
 			<dialog ref="dialog" class="dialog">
 				<font-awesome :icon="faXmark" @click="closeDialog" class="dialog__close" />
 				<form method="POST" action="/thank-you" data-netlify="true" name="contact" class="dialog__form">
@@ -46,7 +51,7 @@ import {
 	faGithub,
 	faCodepen,
 	faLinkedin,
-	faInstagram,
+	faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -59,23 +64,24 @@ const socialLinks = ref([
 	{ platform: "Github", url: "https://github.com/eddieebeling" },
 	{ platform: "Codepen", url: "https://codepen.io/eddieebeling" },
 ]);
+const emit = defineEmits(['notifyApp'])
 
 const dialog = ref(null);
 const openDialog = () => dialog.value.showModal();
 const closeDialog = () => dialog.value.close();
+const theme = ref('light');
 
 onMounted(() => {
-	document.documentElement.setAttribute("data-theme", 'light');
+	document.documentElement.setAttribute("data-theme", theme.value);
 });
 
-const toggleTheme = () => {
-	const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
-	const newTheme = currentTheme === "light" ? "dark" : "light";
-	document.documentElement.setAttribute("data-theme", newTheme);
+const toggleTheme = (theme) => {
+	emit('notifyApp', theme)
+	document.documentElement.setAttribute("data-theme", theme);
 
 	const link = document.querySelector('link[data-theme="tokens"]');
 	if (link) {
-		link.href = `/css/${newTheme}/_variables.css`;
+		link.href = `/css/${theme}/_variables.css`;
 	}
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
-	<main>
-		<NuxtPage />
+	<main :class="theme">
+		<NuxtPage @notifyApp="updateTheme" />
 		<figure class="portrait">
 			<img class="portrait__img" :src="photoUrl" :alt="`${name} ${title}`" />
 			<figcaption class="sr-only">{{ name }} is a {{ bio }}</figcaption>
@@ -18,13 +18,19 @@ const bio = ref(
 );
 const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
 
+const theme = ref("light");
+
+const updateTheme = (newTheme) => {
+	theme.value = newTheme;
+};
+
 useHead({
 	title: name.value + " | " + title.value,
 	link: [
 		{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
 		{
 			rel: "stylesheet",
-			href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap",
+			href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&family=Merriweather:wght@300;400;800&display=swap",
 		},
 		{
 			rel: "stylesheet",
@@ -58,21 +64,21 @@ $ee-bp-xxl: 87.5rem; // 1600px
 
 // typography/display-default
 @mixin ee-theme-typography-display-default() {
-    font-family: var(--ee-theme-typography-display-default-mobile-font-family);
-    font-weight: var(--ee-theme-typography-display-default-mobile-font-weight);
-    font-size: var(--ee-theme-typography-display-default-mobile-font-size);
-    line-height: var(--ee-theme-typography-display-default-mobile-line-height);
-    letter-spacing: var(--ee-theme-typography-display-default-mobile-letter-spacing);
-    text-transform: var(--ee-theme-typography-display-default-mobile-text-transform);
+	font-family: var(--ee-theme-typography-display-default-mobile-font-family);
+	font-weight: var(--ee-theme-typography-display-default-mobile-font-weight);
+	font-size: var(--ee-theme-typography-display-default-mobile-font-size);
+	line-height: var(--ee-theme-typography-display-default-mobile-line-height);
+	letter-spacing: var(--ee-theme-typography-display-default-mobile-letter-spacing);
+	text-transform: var(--ee-theme-typography-display-default-mobile-text-transform);
 
-  @media all and (min-width: $ee-bp-lg) {
-      font-family: var(--ee-theme-typography-display-default-font-family);
-      font-weight: var(--ee-theme-typography-display-default-font-weight);
-      font-size: var(--ee-theme-typography-display-default-font-size);
-      line-height: var(--ee-theme-typography-display-default-line-height);
-      letter-spacing: var(--ee-theme-typography-display-default-letter-spacing);
-      text-transform: var(--ee-theme-typography-display-default-text-transform);
-  }
+	@media all and (min-width: $ee-bp-lg) {
+		font-family: var(--ee-theme-typography-display-default-font-family);
+		font-weight: var(--ee-theme-typography-display-default-font-weight);
+		font-size: var(--ee-theme-typography-display-default-font-size);
+		line-height: var(--ee-theme-typography-display-default-line-height);
+		letter-spacing: var(--ee-theme-typography-display-default-letter-spacing);
+		text-transform: var(--ee-theme-typography-display-default-text-transform);
+	}
 }
 
 // typography/headline
@@ -115,11 +121,18 @@ $ee-bp-xxl: 87.5rem; // 1600px
 
 // Keyframes
 @keyframes fadein {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
-* { box-sizing: border-box; }
+* {
+	box-sizing: border-box;
+}
 
 html,
 body {
@@ -168,7 +181,7 @@ main {
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;;
+	align-items: center;
 	padding: 0 size(2);
 
 	@media (min-width: $ee-bp-lg) {
@@ -195,6 +208,10 @@ main {
 		@media (min-width: $ee-bp-lg) {
 			display: none;
 		}
+
+		.contrast & {
+			filter: grayscale(85%);
+		}
 	}
 
 	&__social-links {
@@ -219,6 +236,7 @@ main {
 
 	&__name {
 		@include ee-theme-typography-display-default();
+
 		& {
 			color: var(--ee-theme-color-content-default);
 			margin: 0;
@@ -227,10 +245,49 @@ main {
 
 	&__title {
 		@include ee-theme-typography-title();
+
 		& {
 			margin: 0;
 			color: var(--ee-theme-color-content-subtle);
 			text-align: center;
+		}
+	}
+
+	&__theme-toggle {
+		position: absolute;
+		bottom: size(3);
+		left: size(3);
+	}
+
+	&__theme-button {
+		border-radius: var(--ee-theme-border-radius-full);
+		height: size(3);
+		width: size(3);
+		margin-right: size(2);
+		cursor: pointer;
+		border: none;
+		transition: transform 0.2s ease-in-out;
+
+		&.light {
+			background: #E3CDBD;
+			outline-offset: 2px;
+			outline: solid 2px #704B36;
+		}
+
+		&.dark {
+			background: #4C6889;
+			outline-offset: 2px;
+			outline: solid 2px #A9B6C5;
+		}
+
+		&.contrast {
+			background: #FFFFFF;
+			outline-offset: 2px;
+			outline: solid 2px #1976D2;
+		}
+
+		&:hover {
+			transform: scale(1.2);
 		}
 	}
 }
@@ -248,6 +305,10 @@ main {
 		transition: all 0.2s linear;
 		border: solid var(--ee-theme-border-width-md) var(--ee-theme-button-color-border-default);
 		border-radius: var(--ee-theme-border-radius-md);
+
+		.contrast & {
+			font-family: var(--ee-typography-font-family-merriweather);
+		}
 
 		&::after {
 			content: "😀";
@@ -283,6 +344,10 @@ main {
 		object-fit: cover;
 		width: 100%;
 		height: 100%;
+
+		.contrast & {
+			filter: grayscale(85%);
+		}
 	}
 }
 
@@ -308,6 +373,7 @@ main {
 
 	&__title {
 		@include ee-theme-typography-headline();
+
 		& {
 			color: var(--ee-theme-color-content-default);
 			margin-top: size(1);
@@ -363,6 +429,10 @@ main {
 			border: solid var(--ee-theme-border-width-md) var(--ee-theme-button-color-border-default);
 			border-radius: var(--ee-theme-border-radius-md);
 
+			.contrast & {
+				font-family: var(--ee-typography-font-family-merriweather);
+			}
+
 			&:hover {
 				background: var(--ee-theme-button-color-background-knockout-hover);
 				color: var(--ee-theme-button-color-content-knockout-hover);
@@ -379,7 +449,7 @@ dialog[open] {
 	transform: scaleY(1);
 	padding: size(0);
 	box-shadow: var(--ee-theme-box-shadow-md);
-	border:none;
+	border: none;
 }
 
 /*   Closed state of the dialog   */
@@ -403,7 +473,7 @@ dialog {
 dialog::backdrop {
 	background-color: var(--ee-theme-color-background-overlay-light);
 	transition: display 0.2s allow-discrete, overlay 0.2s allow-discrete,
-	background-color 0.2s;
+		background-color 0.2s;
 }
 
 dialog[open]::backdrop {

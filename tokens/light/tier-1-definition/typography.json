@@ -3,6 +3,9 @@
         "font-family": {
             "montserrat": {
                 "value": "Montserrat, sans-serif"
+            },
+            "merriweather": {
+                "value": "Merriweather, serif"
             }
         },
         "font-weight": {

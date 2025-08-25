@@ -39,7 +39,7 @@ console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFERENT THEMES AND PLATFORMS
 
-['light', 'dark'].map(function (theme) {
+['light', 'dark', 'contrast'].map(function (theme) {
   ['css'].map(function (platform) {
     console.log('\n==============================================');
     console.log(`\nProcessing: [${platform}] [${theme}]`);

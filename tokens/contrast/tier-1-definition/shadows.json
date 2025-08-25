@@ -1,0 +1,38 @@
+{
+    "shadow": {
+        "md": {
+            "x": {
+                "value": "2px"
+            },
+            "y": {
+                "value": "2px"
+            },
+            "blur": {
+                "value": "16px"
+            },
+            "spread": {
+                "value": "0px"
+            },
+            "color": {
+                "value": "#0000000f"
+            }
+        },
+        "sm": {
+            "x": {
+                "value": "1px"
+            },
+            "y": {
+                "value": "1px"
+            },
+            "blur": {
+                "value": "4px"
+            },
+            "spread": {
+                "value": "2px"
+            },
+            "color": {
+                "value": "#00000014"
+            }
+        }
+    }
+}
