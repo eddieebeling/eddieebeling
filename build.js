@@ -63,8 +63,8 @@ console.log('Build started...');
             // Build box-shadows as CSS custom props
             const boxShadowGroups = importJsonFile(`./tokens/${theme}/tier-1-definition/shadows.json`) || {};
             Object.entries(boxShadowGroups['shadow']).forEach(([size, obj]) => {
-            const boxShadow = `${obj.x.value} ${obj.y.value} ${obj.blur.value} ${obj.spread.value} ${obj.color.value};`;
-            cssVariables.push(`  --${platform.prefix}-theme-box-shadow-${size}: ${boxShadow}`);
+                const boxShadow = `${obj.x.value} ${obj.y.value} ${obj.blur.value} ${obj.spread.value} ${obj.color.value};`;
+                cssVariables.push(`  --${platform.prefix}-theme-box-shadow-${size}: ${boxShadow}`);
             });
 
             return `:root {
