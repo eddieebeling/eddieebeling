@@ -229,7 +229,7 @@ main {
 		}
 
 		.contrast & {
-			filter: grayscale(90%);
+			filter: grayscale(95%);
 		}
 	}
 
@@ -365,7 +365,7 @@ main {
 		height: 100%;
 
 		.contrast & {
-			filter: grayscale(90%);
+			filter: grayscale(95%);
 		}
 	}
 }
