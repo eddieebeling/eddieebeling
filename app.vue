@@ -39,7 +39,7 @@ const updateTheme = (newTheme) => {
 
 	const link = document.querySelector('link[data-theme="tokens"]');
 	if (link) {
-		link.href = `/css/${theme.value}/_variables.css`;
+		link.href = `/css/light/_variables.css`;
 	}
 };
 
@@ -53,7 +53,7 @@ useHead({
 		},
 		{
 			rel: "stylesheet",
-			href: `/css/${theme.value}/_variables.css`,
+			href: `/css/light/_variables.css`,
 			"data-theme": "tokens",
 		},
 	],
