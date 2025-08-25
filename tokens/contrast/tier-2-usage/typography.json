@@ -11,7 +11,7 @@
                 "value": "{typography.font-weight.800}"
             },
             "line-height": {
-                "value": "{typography.line-height.64}"
+                "value": "{typography.line-height.72}"
             },
             "letter-spacing": {
                 "value": "{typography.letter-spacing.0}"
@@ -31,7 +31,7 @@
                 "value": "{typography.font-weight.800}"
             },
             "line-height": {
-                "value": "{typography.line-height.36}"
+                "value": "{typography.line-height.48}"
             },
             "letter-spacing": {
                 "value": "{typography.letter-spacing.0}"

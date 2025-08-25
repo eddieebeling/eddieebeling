@@ -3,16 +3,16 @@
     "color": {
       "background": {
         "default": {
-          "value": "{color.utility.blue.600}"
-        },
-        "hover": {
-          "value": "{color.utility.blue.700}"
-        },
-        "knockout": {
           "value": "{color.utility.blue.100}"
         },
-        "knockout-hover": {
+        "hover": {
           "value": "{color.utility.blue.200}"
+        },
+        "knockout": {
+          "value": "{color.utility.blue.600}"
+        },
+        "knockout-hover": {
+          "value": "{color.utility.blue.700}"
         },
         "active": {
           "value": "{color.utility.blue.800}"
@@ -23,16 +23,16 @@
       },
       "content": {
         "default": {
-          "value": "{color.neutral.white}"
+          "value": "{color.utility.blue.700}"
         },
         "hover": {
-          "value": "{color.neutral.white}"
+          "value": "{color.utility.blue.700}"
         },
         "knockout": {
-          "value": "{color.utility.blue.700}"
+          "value": "{color.neutral.white}"
         },
         "knockout-hover": {
-          "value": "{color.utility.blue.700}"
+          "value": "{color.neutral.white}"
         },
         "active": {
           "value": "{color.neutral.white}"
