@@ -61,37 +61,37 @@
         },
         "line-height": {
             "16": {
-                "value": "1"
+                "value": "1rem"
             },
             "20": {
                 "value": "1.25"
             },
             "24": {
-                "value": "1.5"
+                "value": "1.5rem"
             },
             "28": {
-                "value": "1.75"
+                "value": "1.75rem"
             },
             "32": {
-                "value": "2"
+                "value": "2rem"
             },
             "36": {
-                "value": "2.25"
+                "value": "2.25rem"
             },
             "48": {
-                "value": "3"
+                "value": "3rem"
             },
             "56": {
-                "value": "3.5"
+                "value": "3.5rem"
             },
             "64": {
-                "value": "4"
+                "value": "4rem"
             },
             "72": {
-                "value": "4.5"
+                "value": "4.5rem"
             },
             "110": {
-                "value": "7"
+                "value": "7rem"
             }
         },
         "letter-spacing": {

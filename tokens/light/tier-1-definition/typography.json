@@ -1,0 +1,118 @@
+{
+    "typography": {
+        "font-family": {
+            "montserrat": {
+                "value": "Montserrat, sans-serif"
+            }
+        },
+        "font-weight": {
+            "300": {
+                "value": "300"
+            },
+            "800": {
+                "value": "800"
+            }
+        },
+        "font-size": {
+            "12": {
+                "value": "0.75rem"
+            },
+            "14": {
+                "value": "0.875rem"
+            },
+            "16": {
+                "value": "1rem"
+            },
+            "18": {
+                "value": "1.125rem"
+            },
+            "20": {
+                "value": "1.25rem"
+            },
+            "24": {
+                "value": "1.5rem"
+            },
+            "28": {
+                "value": "1.75rem"
+            },
+            "32": {
+                "value": "2rem"
+            },
+            "48": {
+                "value": "3rem"
+            },
+            "56": {
+                "value": "3.5rem"
+            }
+        },
+        "text-transform": {
+            "uppercase": {
+                "value": "uppercase"
+            },
+            "lowercase": {
+                "value": "lowercase"
+            },
+            "capitalize": {
+                "value": "capitalize"
+            },
+            "none": {
+                "value": "none"
+            }
+        },
+        "line-height": {
+            "16": {
+                "value": "1rem"
+            },
+            "20": {
+                "value": "1.25"
+            },
+            "24": {
+                "value": "1.5rem"
+            },
+            "28": {
+                "value": "1.75rem"
+            },
+            "32": {
+                "value": "2rem"
+            },
+            "36": {
+                "value": "2.25rem"
+            },
+            "48": {
+                "value": "3rem"
+            },
+            "56": {
+                "value": "3.5rem"
+            },
+            "64": {
+                "value": "4rem"
+            },
+            "72": {
+                "value": "4.5rem"
+            },
+            "110": {
+                "value": "7rem"
+            }
+        },
+        "letter-spacing": {
+            "minus-2": {
+                "value": "-2px"
+            },
+            "minus-1-half": {
+                "value": "-1.5px"
+            },
+            "minus-1": {
+                "value": "-1px"
+            },
+            "0": {
+                "value": "0"
+            },
+            "half": {
+                "value": "0.5px"
+            },
+            "2": {
+                "value": "2px"
+            }
+        }
+    }
+}

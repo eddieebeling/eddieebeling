@@ -63,4 +63,19 @@ const socialLinks = ref([
 const dialog = ref(null);
 const openDialog = () => dialog.value.showModal();
 const closeDialog = () => dialog.value.close();
+
+onMounted(() => {
+	document.documentElement.setAttribute("data-theme", 'light');
+});
+
+const toggleTheme = () => {
+	const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+	const newTheme = currentTheme === "light" ? "dark" : "light";
+	document.documentElement.setAttribute("data-theme", newTheme);
+
+	const link = document.querySelector('link[data-theme="tokens"]');
+	if (link) {
+		link.href = `/css/${newTheme}/_variables.css`;
+	}
+};
 </script>

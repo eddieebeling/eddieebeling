@@ -28,7 +28,8 @@ useHead({
 		},
 		{
 			rel: "stylesheet",
-			href: "/css/_variables.css",
+			href: "/css/light/_variables.css",
+			"data-theme": "tokens",
 		},
 	],
 });
@@ -55,7 +56,7 @@ $ee-bp-lg: 60rem; // 960px
 $ee-bp-xl: 75rem; // 1200px
 $ee-bp-xxl: 87.5rem; // 1600px
 
-// Typography (composite tokens)
+// typography/display-default
 @mixin ee-theme-typography-display-default() {
     font-family: var(--ee-theme-typography-display-default-mobile-font-family);
     font-weight: var(--ee-theme-typography-display-default-mobile-font-weight);
@@ -74,6 +75,7 @@ $ee-bp-xxl: 87.5rem; // 1600px
   }
 }
 
+// typography/headline
 @mixin ee-theme-typography-headline() {
 	font-family: var(--ee-theme-typography-headline-mobile-font-family);
 	font-weight: var(--ee-theme-typography-headline-mobile-font-weight);
@@ -92,6 +94,24 @@ $ee-bp-xxl: 87.5rem; // 1600px
 	}
 }
 
+// typography/title
+@mixin ee-theme-typography-title() {
+	font-family: var(--ee-theme-typography-title-mobile-font-family);
+	font-weight: var(--ee-theme-typography-title-mobile-font-weight);
+	font-size: var(--ee-theme-typography-title-mobile-font-size);
+	line-height: var(--ee-theme-typography-title-mobile-line-height);
+	letter-spacing: var(--ee-theme-typography-title-mobile-letter-spacing);
+	text-transform: var(--ee-theme-typography-title-mobile-text-transform);
+
+	@media all and (min-width: $ee-bp-lg) {
+		font-family: var(--ee-theme-typography-title-font-family);
+		font-weight: var(--ee-theme-typography-title-font-weight);
+		font-size: var(--ee-theme-typography-title-font-size);
+		line-height: var(--ee-theme-typography-title-line-height);
+		letter-spacing: var(--ee-theme-typography-title-letter-spacing);
+		text-transform: var(--ee-theme-typography-title-text-transform);
+	}
+}
 
 // Keyframes
 @keyframes fadein {
@@ -108,8 +128,8 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	color: var(--ee-theme-color-content-brand);
-	background: var(--ee-theme-color-background-subtle);
+	color: var(--ee-theme-color-content-default);
+	background: var(--ee-theme-color-background-default);
 }
 
 .sr-only {
@@ -200,21 +220,17 @@ main {
 	&__name {
 		@include ee-theme-typography-display-default();
 		& {
-			color: var(--ee-theme-color-content-brand);
+			color: var(--ee-theme-color-content-default);
 			margin: 0;
 		}
 	}
 
 	&__title {
-		font-size: 1.125rem;
-		font-weight: 300;
-		line-height: 1.2;
-		margin: 0;
-		color: var(--ee-theme-color-content-subtle);
-		text-align: center;
-
-		@media (min-width: $ee-bp-lg) {
-			font-size: 1.625rem;
+		@include ee-theme-typography-title();
+		& {
+			margin: 0;
+			color: var(--ee-theme-color-content-subtle);
+			text-align: center;
 		}
 	}
 }
@@ -225,7 +241,6 @@ main {
 	&__cta {
 		background: var(--ee-theme-button-color-background-default);
 		color: var(--ee-theme-button-color-content-default);
-		border: none;
 		padding: size(2) size(4);
 		font-size: 1.125rem;
 		font-weight: 800;
@@ -271,66 +286,6 @@ main {
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background: var(--ee-theme-color-background-brand-knockout);
-	}
-
-	.section {
-		&__cta {
-			background: var(--ee-theme-button-primary-color-background-default);
-			border: solid 2px var(--ee-theme-button-primary-color-border-default);
-			color: var(--ee-theme-button-primary-color-content-default);
-
-			&:hover {
-				background: var(--ee-theme-button-primary-color-background-hover);
-				border: solid 2px var(--ee-theme-button-primary-color-border-hover);
-				color: var(--ee-theme-button-primary-color-content-hover);
-			}
-		}
-	}
-
-	.header {
-		h1 {
-			color: var(--ee-theme-color-content-knockout);
-		}
-
-		h2 {
-			color: var(--ee-theme-color-content-subtle);
-		}
-
-		&__social-links {
-			a {
-				color: var(--ee-theme-color-icon-brand);
-			}
-
-			a:hover {
-				color: var(--ee-theme-color-icon-brand-hover);
-			}
-		}
-	}
-
-	.dialog {
-		&__form {
-			background: var(--ee-color-neutral-black) !important;
-			color: var(--ee-theme-color-content-subtle);
-
-			input,
-			textarea {
-				background: var(--ee-color-neutral-900);
-				color: var(--ee-color-neutral-300);
-				border: solid var(--ee-theme-border-width-sm) var(--ee-color-neutral-800);
-			}
-		}
-
-		&__label {
-			span {
-				color: var(--ee-theme-color-content-subtle)
-			}
-		}
-	}
-}
-
 /* Dialog Styles */
 .dialog {
 	min-width: 375px;
@@ -342,19 +297,19 @@ main {
 		right: size(3);
 		font-size: 1.5rem;
 		cursor: pointer;
-		color: var(--ee-theme-color-icon-subtle);
+		color: var(--ee-theme-color-icon-default);
 		transition: all 0.2s linear;
 		z-index: var(--ee-z-index-500);
 
 		&:hover {
-			color: var(--ee-theme-color-icon-knockout);
+			color: var(--ee-theme-color-icon-default-hover);
 		}
 	}
 
 	&__title {
 		@include ee-theme-typography-headline();
 		& {
-			color: var(--ee-theme-color-content-brand);
+			color: var(--ee-theme-color-content-default);
 			margin-top: size(1);
 			margin-bottom: size(0);
 		}
@@ -370,7 +325,7 @@ main {
 		flex-direction: column;
 		gap: size(2);
 		padding: size(4) size(6) size(6) size(6);
-		background: var(--ee-theme-color-background);
+		background: var(--ee-theme-color-background-default);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		margin: 0 auto;
 		position: relative;
@@ -395,8 +350,8 @@ main {
 		}
 
 		button {
-			background: var(--ee-theme-button-primary-color-background-default);
-			color: var(--ee-theme-button-primary-color-content-default);
+			background: var(--ee-theme-button-color-background-knockout);
+			color: var(--ee-theme-button-color-content-knockout);
 			padding: size(2) size(4);
 			font-size: 1.125rem;
 			font-weight: 800;
@@ -405,11 +360,14 @@ main {
 			transition: all 0.2s linear;
 			border-radius: var(--ee-theme-border-radius-md);
 			width: 100%;
-			border: solid  var(--ee-theme-border-width-md) var(--ee-theme-button-primary-color-border-default);
+			border: solid var(--ee-theme-border-width-md) var(--ee-theme-button-color-border-default);
+			border-radius: var(--ee-theme-border-radius-md);
 
 			&:hover {
-				background: var(--ee-theme-button-primary-color-background-hover);
-				color: white;
+				background: var(--ee-theme-button-color-background-knockout-hover);
+				color: var(--ee-theme-button-color-content-knockout-hover);
+				outline: 2px solid var(--ee-color-neutral-600);
+				outline-offset: 2px;
 			}
 		}
 	}
