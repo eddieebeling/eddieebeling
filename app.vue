@@ -237,7 +237,7 @@ main {
 		width: 360px;
 		height: 360px;
 		clip-path: circle(30% at 50% 35%);
-		margin-bottom: -116px;
+		margin-bottom: -88px;
 
 		@media (min-width: $ee-bp-lg) {
 			display: none;
