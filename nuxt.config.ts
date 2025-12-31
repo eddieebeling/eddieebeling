@@ -5,5 +5,12 @@ export default defineNuxtConfig({
   modules: ['@vesp/nuxt-fontawesome', 'nuxt-gtag'],
   gtag: {
     id: 'G-QVBZW1PKD2'
+  },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
   }
 })
