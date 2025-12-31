@@ -2,13 +2,13 @@
   "color": {
     "content": {
       "default": {
-        "value": "{color.brand.brown.800}"
+        "value": "{color.brand.brown.700}"
       },
       "default-hover": {
-        "value": "{color.brand.brown.900}"
+        "value": "{color.brand.brown.800}"
       },
       "subtle": {
-        "value": "{color.brand.blue.300}"
+        "value": "{color.brand.brown.400}"
       },
       "disabled": {
         "value": "{color.neutral.500}"
@@ -38,10 +38,10 @@
     },
     "icon": {
       "default": {
-        "value": "{color.brand.brown.800}"
+        "value": "{color.brand.brown.700}"
       },
       "default-hover": {
-        "value": "{color.brand.brown.900}"
+        "value": "{color.brand.brown.500}"
       }
     }
   }

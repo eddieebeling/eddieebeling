@@ -57,7 +57,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const name = ref("Eddie Ebeling");
 const title = ref("UI/UX and Front End Developer");
-const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
+const photoUrl = ref("https://res.cloudinary.com/eddieebeling/image/upload/v1767195944/eddie-ebeling-portrait-1:1.jpg");
 const socialLinks = ref([
 	{ platform: "Instagram", url: "https://instagram.com/eddieebeling" },
 	{ platform: "Linkedin", url: "https://linkedin.com/in/eddieebeling" },

@@ -16,7 +16,7 @@ const title = ref("UI/UX and Front End Developer");
 const bio = ref(
 	"Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications."
 );
-const photoUrl = ref("/img/eddie-ebeling-portrait.jpg");
+const photoUrl = ref("https://res.cloudinary.com/eddieebeling/image/upload/v1767195898/eddie-ebeling-portrait.jpg");
 const theme = ref("light");
 const savedTheme = ref(null);
 
@@ -234,7 +234,7 @@ main {
 	}
 
 	&__img {
-		width: 240px;
+		width: 360px;
 		height: 360px;
 		clip-path: circle(30% at 50% 35%);
 		margin-bottom: -116px;
@@ -244,7 +244,7 @@ main {
 		}
 
 		.contrast & {
-			filter: grayscale(90%);
+			filter: saturate(.80) sepia(.3);
 		}
 	}
 
@@ -309,15 +309,15 @@ main {
 		}
 
 		&.dark {
-			background: #4C6889;
+			background: #8E734A;
 			outline-offset: 2px;
-			outline: solid 2px #A9B6C5;
+			outline: solid 2px #E0C7A0;
 		}
 
 		&.contrast {
-			background: #FFFFFF;
+			background: #E4EAD9;
 			outline-offset: 2px;
-			outline: solid 2px #1976D2;
+			outline: solid 2px #9FB07E;
 		}
 
 		&:hover {
@@ -380,7 +380,7 @@ main {
 		height: 100%;
 
 		.contrast & {
-			filter: grayscale(90%);
+			filter: saturate(.80) sepia(.3);
 		}
 	}
 }
@@ -470,7 +470,7 @@ main {
 			&:hover {
 				background: var(--ee-theme-button-color-background-knockout-hover);
 				color: var(--ee-theme-button-color-content-knockout-hover);
-				outline: 2px solid var(--ee-color-neutral-600);
+				outline: 2px solid var(--ee-theme-button-color-border-knockout-hover);
 				outline-offset: 2px;
 			}
 		}

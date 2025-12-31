@@ -23,7 +23,7 @@
       },
       "content": {
         "default": {
-          "value": "{color.brand.brown.800}"
+          "value": "{color.brand.brown.700}"
         },
         "hover": {
           "value": "{color.neutral.white}"
