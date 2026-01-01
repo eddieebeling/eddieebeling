@@ -3,13 +3,13 @@
     "color": {
       "background": {
         "default": {
-          "value": "{color.brand.sand.700}"
+          "value": "{color.brand.sand.900}"
         },
         "hover": {
-          "value": "{color.brand.sand.600}"
+          "value": "{color.brand.sand.800}"
         },
         "knockout": {
-          "value": "{color.brand.sand.800}"
+          "value": "{color.brand.sand.900}"
         },
         "knockout-hover": {
           "value": "{color.brand.sand.700}"
@@ -43,13 +43,13 @@
       },
       "border": {
         "default": {
-          "value": "{color.brand.sand.700}"
+          "value": "{color.brand.sand.900}"
         },
         "hover": {
-          "value": "{color.brand.sand.600}"
+          "value": "{color.brand.sand.800}"
         },
         "knockout": {
-          "value": "{color.brand.sand.700}"
+          "value": "{color.brand.sand.900}"
         },
         "knockout-hover": {
           "value": "{color.brand.sand.400}"
