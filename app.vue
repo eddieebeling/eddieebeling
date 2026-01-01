@@ -309,7 +309,7 @@ main {
 		}
 
 		&.dark {
-			background: #8E734A;
+			background: #6B5537;
 			outline-offset: 2px;
 			outline: solid 2px #E0C7A0;
 		}

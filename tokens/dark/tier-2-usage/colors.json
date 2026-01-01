@@ -16,7 +16,7 @@
     },
     "background": {
       "default": {
-        "value": "{color.brand.sand.900}"
+        "value": "{color.brand.sand.1000}"
       },
       "subtle": {
         "value": "{color.brand.sand.100}"

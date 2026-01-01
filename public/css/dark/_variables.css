@@ -47,6 +47,7 @@
   --ee-color-brand-sand-700: #B19363;
   --ee-color-brand-sand-800: #8E734A;
   --ee-color-brand-sand-900: #6B5537;
+  --ee-color-brand-sand-1000: #3C280D;
   --ee-color-brand-green-100: #F5F7F2;
   --ee-color-brand-green-200: #E4EAD9;
   --ee-color-brand-green-300: #C9D4B4;
@@ -115,7 +116,7 @@
   --ee-theme-color-content-default-hover: #E0C7A0;
   --ee-theme-color-content-subtle: #E6D8BF;
   --ee-theme-color-content-disabled: #999999;
-  --ee-theme-color-background-default: #6B5537;
+  --ee-theme-color-background-default: #3C280D;
   --ee-theme-color-background-subtle: #FDF7EF;
   --ee-theme-color-background-disabled: #e0e0e0;
   --ee-theme-color-background-overlay-light: rgba(0, 0, 0, 0.25);
