@@ -15,7 +15,7 @@ npm run dev
 npm run generate
 ```
 
-The generated static site is written to `.output/public`. The included `netlify.toml` configures Netlify to run `npm run generate` and publish that directory.
+The generated static site is copied to `dist`. The included `netlify.toml` configures Netlify to run `npm run generate` and publish that directory.
 
 ## Main source files
 
