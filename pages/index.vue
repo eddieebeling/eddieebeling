@@ -57,7 +57,7 @@ useHead({
 
     <section id="experience" class="career shell">
       <div class="section-label">02 / Experience snapshot</div>
-      <div class="career-heading"><h2>More than a decade making the <span>web useful.</span></h2><div class="career-meta"><strong>Senior Software Engineer<br />&amp; Front-End Developer</strong><span>Currently at Dot Foods<br />Scottsdale, Arizona</span></div></div>
+      <div class="career-heading"><h2>Since 2010, making the <span>web useful.</span></h2><div class="career-meta"><strong>Senior Software Engineer<br />&amp; Front-End Developer</strong><span>Currently at Dot Foods<br />Scottsdale, Arizona</span></div></div>
       <div class="role-list"><article v-for="item in roles" :key="`${item.company}-${item.years}`" class="role-row"><span class="role-years">{{ item.years }}</span><div class="role-main"><h3>{{ item.role }}</h3><p>{{ item.detail }}</p></div><span class="role-company">{{ item.company }}</span></article></div>
       <div class="career-footer"><span>More detail, recommendations, and credentials</span><a class="text-link" href="https://www.linkedin.com/in/eddieebeling/" target="_blank" rel="noreferrer">View LinkedIn profile <span aria-hidden="true">↗</span></a></div>
     </section>
