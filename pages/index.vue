@@ -7,11 +7,24 @@ const capabilities = [
   "Web accessibility",
 ];
 
+const technologies = [
+  "Vue",
+  "Nuxt",
+  "Pinia",
+  "SCSS",
+  "Vite",
+  "Node.js",
+  "GitHub",
+  "Style Dictionary",
+  "Figma",
+  "Netlify",
+];
+
 const roles = [
-  { years: "2021 — now", role: "Senior Software Engineer", company: "Dot Foods", detail: "Scalable web applications, front-end architecture, and product-minded engineering." },
-  { years: "2018 — 2021", role: "Senior UX Developer", company: "BUNN", detail: "Connected UX strategy, interface design, and implementation for digital product experiences." },
+  { years: "2021 — now", role: "Senior Software Engineer", company: "Dot Foods", detail: "Scalable web applications, front-end architecture, and product-minded engineering with Optimizely DXP." },
+  { years: "2018 — 2021", role: "Senior UX Developer", company: "BUNN", detail: "IoT-connected products, UX strategy, interface design, and implementation for digital product experiences." },
   { years: "2017 — 2018", role: "Senior Software Engineer", company: "Allscripts", detail: "Developed software for healthcare workflows with an emphasis on usability and reliability." },
-  { years: "2015 — 2017", role: "Senior UI/UX Developer", company: "H. D. Smith", detail: "Designed and developed web interfaces, front-end architecture, and reusable UI patterns." },
+  { years: "2015 — 2017", role: "Senior UI/UX Developer", company: "H. D. Smith", detail: "Designed and developed ecommerce experiences, contributed to mobile development, and established front-end architecture and reusable UI patterns." },
   { years: "2010 — 2015", role: "Web Developer, LRS Web Solutions", company: "Levi, Ray & Shoup", detail: "Built client-facing web solutions across design, development, and delivery." },
 ];
 
@@ -28,7 +41,7 @@ useHead({
   <main>
     <nav class="nav shell" aria-label="Primary navigation">
       <a class="wordmark" href="#top" aria-label="Eddie Ebeling home"><span class="wordmark-mark">EE</span><span>EDDIE EBELING</span></a>
-      <div class="nav-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+      <div class="nav-links"><a href="#about">About</a><a href="#technologies">Technologies</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
       <a class="nav-cta" href="https://www.linkedin.com/in/eddieebeling/" target="_blank" rel="noreferrer">Connect <span aria-hidden="true">↗︎</span></a>
     </nav>
 
@@ -38,7 +51,7 @@ useHead({
         <h1>I build digital experiences that scale <em>beautifully.</em></h1>
         <p class="hero-intro">I&apos;m Eddie — a Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript.</p>
         <div class="hero-actions"><a class="button button-primary" href="#experience">See my experience <span aria-hidden="true">↓︎</span></a><a class="text-link" href="https://github.com/eddieebeling" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗︎</span></a></div>
-        <div class="hero-note"><span class="line" /><span>Currently a Senior Software Engineer at <strong>Dot Foods</strong></span></div>
+      <div class="hero-note"><span class="line" /><span>Currently a Senior Software Engineer at <strong>Dot Foods</strong> · Mount Sterling, IL</span></div>
       </div>
       <div class="hero-visual" aria-label="Portrait of Eddie Ebeling">
         <div class="visual-orbit orbit-one" /><div class="visual-orbit orbit-two" />
@@ -55,15 +68,21 @@ useHead({
       <div class="about-grid"><h2>I bring product thinking and front-end craft together.</h2><div class="about-copy"><p>I&apos;m a senior software engineer and front-end developer with a background in product development, UX, and interface systems. I like working where product thinking meets implementation—understanding the problem, shaping the experience, and building the details that bring it to life.</p><p>I care about accessibility, collaboration, and finding clear solutions that work for both the people using them and the teams building them.</p><a class="text-link" href="https://www.linkedin.com/in/eddieebeling/" target="_blank" rel="noreferrer">More on LinkedIn <span aria-hidden="true">↗︎</span></a></div></div>
     </section>
 
+    <section id="technologies" class="technologies shell">
+      <div class="section-label">02 / Preferred technologies</div>
+      <div class="technologies-heading"><h2>A <span>Vue-first</span> toolkit for thoughtful digital products.</h2><p>I use these tools to bring digital experiences from concept to production, shaping everything from design systems and interfaces to accessible, maintainable code.</p></div>
+      <div class="technology-list" aria-label="Preferred technologies"><span v-for="(technology, index) in technologies" :key="technology"><small>{{ String(index + 1).padStart(2, &apos;0&apos;) }}</small>{{ technology }}</span></div>
+    </section>
+
     <section id="experience" class="career shell">
-      <div class="section-label">02 / Experience snapshot</div>
-      <div class="career-heading"><h2>A career turning ideas into <span> experiences.</span></h2><div class="career-meta"><strong>Senior Software Engineer<br />&amp; Front-End Developer</strong><span>Currently at Dot Foods<br />Scottsdale, Arizona</span></div></div>
+      <div class="section-label">03 / Experience snapshot</div>
+        <div class="career-heading"><h2>A career turning ideas into <span> experiences.</span></h2><div class="career-meta"><strong>Senior Software Engineer<br />&amp; Front-End Developer</strong><span>Currently at Dot Foods<br />Mount Sterling, IL</span></div></div>
       <div class="role-list"><article v-for="item in roles" :key="`${item.company}-${item.years}`" class="role-row"><span class="role-years">{{ item.years }}</span><div class="role-main"><h3>{{ item.role }}</h3><p>{{ item.detail }}</p></div><span class="role-company">{{ item.company }}</span></article></div>
       <div class="career-footer"><span>More detail, recommendations, and credentials</span><a class="text-link" href="https://www.linkedin.com/in/eddieebeling/" target="_blank" rel="noreferrer">View LinkedIn profile <span aria-hidden="true">↗︎</span></a></div>
     </section>
 
     <section id="contact" class="contact shell">
-      <div class="contact-glow" /><div class="section-label">03 / Let&apos;s make something</div>
+      <div class="contact-glow" /><div class="section-label">04 / Let&apos;s make something</div>
       <div class="contact-layout">
         <div class="contact-content"><p class="eyebrow"><span class="eyebrow-dot" /> Open to thoughtful conversations</p><h2>Let&apos;s talk about<br /><em>whatever.</em></h2><p class="contact-copy">Whether you&apos;re hiring, building something new, or looking for a thoughtful front-end partner, I&apos;d love to hear what you&apos;re working on.</p></div>
         <div class="contact-form-wrap">
