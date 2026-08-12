@@ -43,7 +43,7 @@ useHead({
       <div class="hero-visual" aria-label="Portrait of Eddie Ebeling">
         <div class="visual-orbit orbit-one" /><div class="visual-orbit orbit-two" />
         <div class="portrait-frame"><img src="/eddie-ebeling.jpg" alt="Eddie Ebeling" class="portrait" /></div>
-        <div class="visual-stamp"><span>01</span><span>IMAGINE<br />DEVELOP<br />DELIVER</span></div>
+        <div class="visual-stamp"><span>01</span><span>DISCOVER<br />DESIGN<br />DELIVER</span></div>
         <div class="visual-caption">A little curious.<br />A lot intentional.</div>
       </div>
     </section>
@@ -73,7 +73,7 @@ useHead({
             <div class="form-grid"><label><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required /></label><label><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /></label></div>
             <label><span>What are you working on?</span><select name="project-type" value=""><option value="" disabled>Select a topic</option><option value="new-project">A new project</option><option value="design-systems">Design Systems</option><option value="product-ux">Product or UX thinking</option><option value="front-end">Front-end development</option><option value="just-saying-hi">Just saying hi</option></select></label>
             <label><span>Message</span><textarea name="message" rows="4" placeholder="A few words to get us started..." required /></label>
-            <button class="button button-light form-submit" type="submit">Send message <span aria-hidden="true">↗︎</span></button>
+            <button class="button button-primary form-submit" type="submit">Send message <span aria-hidden="true">↗︎</span></button>
             <p class="form-note">Your message will be sent securely through Netlify Forms.</p>
           </form>
           <div class="contact-aside"><span>Elsewhere</span><a href="https://github.com/eddieebeling" target="_blank" rel="noreferrer">GitHub ↗︎</a><a href="https://www.linkedin.com/in/eddieebeling/" target="_blank" rel="noreferrer">LinkedIn ↗︎</a><a href="https://www.instagram.com/eddieebeling" target="_blank" rel="noreferrer">Instagram ↗︎</a><a href="https://www.facebook.com/eddieebeling" target="_blank" rel="noreferrer">Facebook ↗︎</a><a href="https://codepen.io/eddieebeling" target="_blank" rel="noreferrer">CodePen ↗︎</a></div>
