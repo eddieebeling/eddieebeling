@@ -9,7 +9,6 @@ const capabilities = [
 
 const roles = [
   { years: "2021 — now", role: "Senior Software Engineer", company: "Dot Foods", detail: "Scalable web applications, front-end architecture, and product-minded engineering." },
-  { years: "2021", role: "Senior Front-End Developer", company: "Dot Foods", detail: "Built cross-platform front-end experiences with a focus on usability and consistency." },
   { years: "2018 — 2021", role: "Senior UX Developer", company: "BUNN", detail: "Connected UX strategy, interface design, and implementation for digital product experiences." },
   { years: "2017 — 2018", role: "Senior Software Engineer", company: "Allscripts", detail: "Developed software for healthcare workflows with an emphasis on usability and reliability." },
   { years: "2015 — 2017", role: "Senior UI/UX Developer", company: "H. D. Smith", detail: "Designed and developed web interfaces, front-end architecture, and reusable UI patterns." },
