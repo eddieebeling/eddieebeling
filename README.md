@@ -1,22 +1,26 @@
-## Eddie Ebeling
+# Eddie Ebeling portfolio
 
-Creative Technologist and Front End Developer specializing in cross-platform and multi-device web development using HTML, CSS, and JavaScript. Has a strong focus in user experience design and development for mobile and web-based applications.
+Personal portfolio site built with Nuxt 3 and Vue 3, designed for static deployment on Netlify.
 
-Areas of expertise:
-* HTML, CSS and JavaScript
-* jQuery, AngularJS, Angular 2+, and Vue.js
-* Design Token Systems
-* .NET, Java, & Node
-* Product & app design, rapid prototyping
-* Front end architecture and development
-* User insights and website analytics
+## Quick start
 
-Related experience:
-* Agile methodology
-* Continuous integration and DevOps (Azure, Jenkins)
-* Computer networking, hardware, and infrastructure
-* Social media marketing, content management, search engine optimization, and web accessibility
+```bash
+npm install
+npm run dev
+```
 
-Complimentary soft skills:
-* Creative problem solving and troubleshooting
-* Verbal communication, team collaboration, mentoring, and leadership
+## Production build
+
+```bash
+npm run generate
+```
+
+The generated static site is written to `.output/public`. The included `netlify.toml` configures Netlify to run `npm run generate` and publish that directory.
+
+## Main source files
+
+- `pages/index.vue` — portfolio page and content
+- `assets/css/main.css` — visual design and responsive layout
+- `public/eddie-ebeling.jpg` — portrait image
+- `nuxt.config.ts` — Nuxt configuration and metadata
+- `netlify.toml` — Netlify build settings
