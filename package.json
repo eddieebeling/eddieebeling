@@ -6,9 +6,10 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "generate": "nuxt generate && node scripts/copy-static-to-dist.mjs",
+    "tokens": "node build.js",
+    "dev": "npm run tokens && nuxt dev",
+    "build": "npm run tokens && nuxt build",
+    "generate": "npm run tokens && nuxt generate && node scripts/copy-static-to-dist.mjs",
     "preview": "nuxt preview"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "sass": "^1.102.0"
+    "sass": "^1.102.0",
+    "style-dictionary": "^5.5.1"
   }
 }

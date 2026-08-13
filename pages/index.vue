@@ -1,4 +1,34 @@
 <script setup>
+import { onMounted, ref } from "vue";
+
+const theme = ref("dark");
+
+const setTheme = (nextTheme) => {
+  theme.value = nextTheme;
+
+  if (!import.meta.client) return;
+
+  if (nextTheme === "light") {
+    document.documentElement.dataset.theme = "light";
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+
+  localStorage.setItem("ee-theme", nextTheme);
+};
+
+const toggleTheme = () => {
+  setTheme(theme.value === "dark" ? "light" : "dark");
+};
+
+onMounted(() => {
+  const savedTheme = localStorage.getItem("ee-theme");
+
+  if (savedTheme === "light" || savedTheme === "dark") {
+    setTheme(savedTheme);
+  }
+});
+
 const capabilities = [
   "Front-end architecture",
   "Design token systems",
@@ -11,13 +41,12 @@ const technologies = [
   "Vue",
   "Nuxt",
   "Pinia",
-  "SCSS",
   "Vite",
-  "Node.js",
-  "GitHub",
-  "Style Dictionary",
-  "Figma",
   "Netlify",
+  "Style Dictionary",
+  "Codex",
+  "Figma",
+  "Claude Design"
 ];
 
 const roles = [
@@ -42,7 +71,9 @@ useHead({
     <nav class="nav shell" aria-label="Primary navigation">
       <a class="wordmark" href="#top" aria-label="Eddie Ebeling home"><span class="wordmark-mark">EE</span><span>EDDIE EBELING</span></a>
       <div class="nav-links"><a href="#about">About</a><a href="#technologies">Technologies</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
-      <a class="nav-cta" href="https://www.linkedin.com/in/eddieebeling/" target="_blank" rel="noreferrer">Connect <span aria-hidden="true">↗︎</span></a>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" :aria-pressed="theme === 'light'" :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggleTheme"><span class="theme-toggle-icon" aria-hidden="true">{{ theme === "dark" ? "☼" : "☾" }}</span><span>{{ theme === "dark" ? "Light" : "Dark" }}</span></button>
+      </div>
     </nav>
 
     <section id="top" class="hero shell">

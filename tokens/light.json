@@ -1,0 +1,63 @@
+{
+  "theme": {
+    "text": {
+      "primary": { "value": "#1c152a", "type": "color" },
+      "secondary": { "value": "#665b78", "type": "color" },
+      "label": { "value": "#47375d", "type": "color" },
+      "placeholder": { "value": "#6f6380", "type": "color" },
+      "note": { "value": "#5e5371", "type": "color" },
+      "footer": { "value": "#5c5370", "type": "color" },
+      "on-strip": { "value": "#4f4467", "type": "color" }
+    },
+    "surface": {
+      "page": { "value": "#fcfaff", "type": "color" },
+      "raised": { "value": "#f1ecfb", "type": "color" },
+      "strip": { "value": "#ece7f5", "type": "color" },
+      "visual": { "value": "#e9e1f7", "type": "color" }
+    },
+    "border": {
+      "subtle": { "value": "rgba(28, 21, 42, 0.16)", "type": "color" },
+      "link": { "value": "rgba(28, 21, 42, 0.35)", "type": "color" },
+      "control": { "value": "rgba(28, 21, 42, 0.3)", "type": "color" }
+    },
+    "accent": { "value": "#7138c8", "type": "color" },
+    "accent-emphasis": { "value": "#6f3aae", "type": "color" },
+    "contrast": { "value": "#1948c4", "type": "color" },
+    "contrast-surface": { "value": "#244bff", "type": "color" },
+    "contrast-surface-hover": { "value": "#1f4eea", "type": "color" },
+    "contrast-foreground": { "value": "#ffffff", "type": "color" },
+    "visual": {
+      "shadow": { "value": "rgba(77, 40, 135, 0.2)", "type": "color" },
+      "glow": { "value": "rgba(113, 56, 200, 0.16)", "type": "color" },
+      "overlay": { "value": "rgba(113, 56, 200, 0.06)", "type": "color" },
+      "scrim": { "value": "rgba(28, 21, 42, 0.24)", "type": "color" },
+      "orbit": { "value": "rgba(98, 55, 160, 0.42)", "type": "color" },
+      "orbit-alt": { "value": "rgba(25, 72, 196, 0.34)", "type": "color" }
+    },
+    "contact": {
+      "ring": { "value": "rgba(111, 58, 174, 0.24)", "type": "color" },
+      "ring-soft": { "value": "rgba(111, 58, 174, 0.04)", "type": "color" },
+      "ring-faint": { "value": "rgba(111, 58, 174, 0.02)", "type": "color" },
+      "glow": { "value": "rgba(113, 56, 200, 0.12)", "type": "color" }
+    },
+    "font": {
+      "display": { "value": "Georgia, \"Times New Roman\", serif", "type": "fontFamily" },
+      "body": { "value": "Arial, Helvetica, sans-serif", "type": "fontFamily" }
+    },
+    "font-size": {
+      "display-hero": { "value": "clamp(3.875rem, 7.2vw, 6.5rem)", "type": "string" },
+      "display-section": { "value": "clamp(2.5rem, 5.5vw, 4.5rem)", "type": "string" },
+      "display-contact": { "value": "clamp(3.375rem, 7vw, 5.625rem)", "type": "string" },
+      "display-mobile": { "value": "clamp(3.625rem, 17vw, 6.125rem)", "type": "string" },
+      "brand": { "value": "0.75rem", "type": "dimension" },
+      "navigation": { "value": "0.75rem", "type": "dimension" },
+      "action": { "value": "0.75rem", "type": "dimension" },
+      "body": { "value": "1rem", "type": "dimension" },
+      "supporting": { "value": "0.875rem", "type": "dimension" },
+      "meta": { "value": "0.75rem", "type": "dimension" },
+      "label": { "value": "0.625rem", "type": "dimension" },
+      "emphasis": { "value": "1.125rem", "type": "dimension" },
+      "symbol": { "value": "1.125rem", "type": "dimension" }
+    }
+  }
+}
