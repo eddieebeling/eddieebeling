@@ -1,80 +1,6 @@
-<script setup>
-import { onMounted, ref } from "vue";
-
-const theme = ref("dark");
-
-const setTheme = (nextTheme) => {
-  theme.value = nextTheme;
-
-  if (!import.meta.client) return;
-
-  if (nextTheme === "light") {
-    document.documentElement.dataset.theme = "light";
-  } else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-
-  localStorage.setItem("ee-theme", nextTheme);
-};
-
-const toggleTheme = () => {
-  setTheme(theme.value === "dark" ? "light" : "dark");
-};
-
-onMounted(() => {
-  const savedTheme = localStorage.getItem("ee-theme");
-
-  if (savedTheme === "light" || savedTheme === "dark") {
-    setTheme(savedTheme);
-  }
-});
-
-const capabilities = [
-  "Front-end architecture",
-  "Design token systems",
-  "Product & app design",
-  "Rapid prototyping",
-  "Web accessibility",
-];
-
-const technologies = [
-  "Vue",
-  "Nuxt",
-  "Pinia",
-  "Vite",
-  "Netlify",
-  "Style Dictionary",
-  "Codex",
-  "Figma",
-  "Claude Design"
-];
-
-const roles = [
-  { years: "2021 — now", role: "Senior Software Engineer", company: "Dot Foods", detail: "Scalable web applications, front-end architecture, and product-minded engineering with Optimizely DXP." },
-  { years: "2018 — 2021", role: "Senior UX Developer", company: "BUNN", detail: "IoT-connected products, UX strategy, interface design, and implementation for digital product experiences." },
-  { years: "2017 — 2018", role: "Senior Software Engineer", company: "Allscripts", detail: "Developed software for healthcare workflows with an emphasis on usability and reliability." },
-  { years: "2015 — 2017", role: "Senior UI/UX Developer", company: "H. D. Smith", detail: "Designed and developed ecommerce experiences, contributed to mobile development, and established front-end architecture and reusable UI patterns." },
-  { years: "2010 — 2015", role: "Web Developer, LRS Web Solutions", company: "Levi, Ray & Shoup", detail: "Built client-facing web solutions across design, development, and delivery." },
-];
-
-useHead({
-  meta: [
-    { property: "og:title", content: "Eddie Ebeling — Creative Technologist" },
-    { property: "og:description", content: "Senior software engineer and front-end developer building clear, accessible digital experiences." },
-    { property: "og:type", content: "website" },
-  ],
-});
-</script>
-
 <template>
   <main>
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a class="wordmark" href="#top" aria-label="Eddie Ebeling home"><span class="wordmark-mark">EE</span><span>EDDIE EBELING</span></a>
-      <div class="nav-links"><a href="#about">About</a><a href="#technologies">Technologies</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
-      <div class="nav-actions">
-        <button class="theme-toggle" type="button" :aria-pressed="theme === 'light'" :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggleTheme"><span class="theme-toggle-icon" aria-hidden="true">{{ theme === "dark" ? "☼" : "☾" }}</span><span>{{ theme === "dark" ? "Light" : "Dark" }}</span></button>
-      </div>
-    </nav>
+    <SiteHeader />
 
     <section id="top" class="hero shell">
       <div class="hero-copy">
@@ -134,3 +60,41 @@ useHead({
     <footer class="footer shell"><span>© {{ new Date().getFullYear() }} Eddie Ebeling</span><a href="#top">Back to top ↑</a><span>eddieebeling.com</span></footer>
   </main>
 </template>
+
+<script setup>
+const capabilities = [
+  "Front-end architecture",
+  "Design token systems",
+  "Product & app design",
+  "Rapid prototyping",
+  "Web accessibility",
+];
+
+const technologies = [
+  "Vue",
+  "Nuxt",
+  "Pinia",
+  "Vite",
+  "Netlify",
+  "Style Dictionary",
+  "Codex",
+  "Figma",
+  "Claude Design"
+];
+
+const roles = [
+  { years: "2021 — now", role: "Senior Software Engineer", company: "Dot Foods", detail: "Scalable web applications, front-end architecture, and product-minded engineering with Optimizely DXP." },
+  { years: "2018 — 2021", role: "Senior UX Developer", company: "BUNN", detail: "IoT-connected products, UX strategy, interface design, and implementation for digital product experiences." },
+  { years: "2017 — 2018", role: "Senior Software Engineer", company: "Allscripts", detail: "Developed software for healthcare workflows with an emphasis on usability and reliability." },
+  { years: "2015 — 2017", role: "Senior UI/UX Developer", company: "H. D. Smith", detail: "Designed and developed ecommerce experiences, contributed to mobile development, and established front-end architecture and reusable UI patterns." },
+  { years: "2010 — 2015", role: "Web Developer, LRS Web Solutions", company: "Levi, Ray & Shoup", detail: "Built client-facing web solutions across design, development, and delivery." },
+];
+
+useHead({
+  meta: [
+    { property: "og:title", content: "Eddie Ebeling — Creative Technologist" },
+    { property: "og:description", content: "Senior software engineer and front-end developer building clear, accessible digital experiences." },
+    { property: "og:type", content: "website" },
+  ],
+});
+</script>

@@ -10,6 +10,7 @@ The site showcases Eddie's experience, preferred technologies, and professional 
 
 - Nuxt 3 with Vue 3.
 - Use JavaScript and Vue SFCs. Do not introduce TypeScript.
+- In Vue SFCs, keep the `<template>` block before the `<script setup>` block.
 - Page routes live in `pages/`.
 - Global styling lives in `assets/css/main.scss`.
 - Static assets live in `public/`.

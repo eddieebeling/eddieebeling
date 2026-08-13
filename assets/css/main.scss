@@ -10,11 +10,11 @@ html { scroll-behavior: smooth; }
 body { margin: size(0); background: var(--ee-theme-surface-page); color: var(--ee-theme-text-primary); font-family: var(--ee-theme-font-body); -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 .shell { width: min(1180px, calc(100% - 96px)); margin: size(0) auto; }
-.nav { height: 96px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--ee-theme-border-subtle); position: relative; z-index: 3; }
+.nav { height: 96px; display: flex; align-items: center; gap: size(4); border-bottom: 1px solid var(--ee-theme-border-subtle); position: relative; z-index: 3; }
 .wordmark { display: flex; align-items: center; gap: size(1.5); font-size: var(--ee-theme-font-size-brand); letter-spacing: .18em; font-weight: 700; }
 .wordmark-mark { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--ee-theme-accent-emphasis); border-radius: 50%; color: var(--ee-theme-accent-emphasis); font-family: var(--ee-theme-font-display); font-size: var(--ee-theme-font-size-brand); letter-spacing: -.08em; }
-.nav-links { display: flex; gap: size(4.25); color: var(--ee-theme-text-secondary); font-size: var(--ee-theme-font-size-navigation); }
-.nav-actions { display: flex; align-items: center; gap: size(3.5); }
+.nav-links { display: flex; gap: size(4.25); margin-left: auto; color: var(--ee-theme-text-secondary); font-size: var(--ee-theme-font-size-navigation); }
+.nav-actions { display: flex; align-items: center; margin-left: size(4); }
 .nav-links a, .text-link, .theme-toggle, .contact-aside a, .footer a { transition: color .2s ease, border-color .2s ease; }
 .nav-links a:hover, .text-link:hover, .contact-aside a:hover, .footer a:hover { color: var(--ee-theme-contrast); }
 .theme-toggle { display: inline-flex; align-items: center; gap: size(1); padding: size(.75) size(1.25); border: 1px solid var(--ee-theme-border-subtle); background: transparent; color: var(--ee-theme-text-secondary); font: inherit; font-size: var(--ee-theme-font-size-navigation); cursor: pointer; }
@@ -121,6 +121,7 @@ h2 span { color: var(--ee-theme-contrast); font-family: var(--ee-theme-font-disp
   .shell { width: min(100% - 42px, 600px); }
   .nav { height: 76px; }
   .nav-links { display: none; }
+  .nav-actions { margin-left: auto; }
   .hero { display: flex; flex-direction: column; align-items: stretch; padding: size(9.5) size(0) size(11.5); gap: size(7.25); }
   h1 { font-size: var(--ee-theme-font-size-display-mobile); }
   .hero-intro { max-width: size(63.75); }
