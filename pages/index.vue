@@ -57,7 +57,7 @@
       </div>
     </section>
 
-    <footer class="site-footer shell"><span>© {{ new Date().getFullYear() }} Eddie Ebeling</span><a class="site-footer__link" href="#top">Back to top ↑</a><span>eddieebeling.com</span></footer>
+    <footer class="site-footer shell"><span>&copy; 2010-{{ new Date().getFullYear() }} Eddie Ebeling</span><a class="site-footer__link" href="#top">Back to top ↑</a><span>eddieebeling.com</span></footer>
   </main>
 </template>
 
