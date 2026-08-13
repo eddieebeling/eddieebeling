@@ -26,6 +26,8 @@ Content is primarily maintained in `pages/index.vue`, including the experience l
 
 ## Styling conventions
 
+- Prefer BEM class names for component styles: use blocks such as `hero`, `contact`, and `site-header`, elements such as `hero__copy`, and modifiers such as `button--primary`.
+- Nest related block, element, modifier, and responsive selectors in SCSS when it improves organization. Keep genuinely shared utilities such as `shell`, `button`, `text-link`, and `sr-only` generic.
 - Use semantic CSS custom properties prefixed with `--ee-theme-`.
 - Keep theme values in `tokens/dark.json` and `tokens/light.json`.
 - Use semantic token names such as `primary`, `secondary`, `contrast`, `surface`, `border`, `accent`, and `text`; do not name tokens after literal colors.

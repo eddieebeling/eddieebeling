@@ -1,9 +1,9 @@
 <template>
-  <nav class="nav shell" aria-label="Primary navigation">
-    <a class="wordmark" :href="isHome ? '#top' : '/'" aria-label="Eddie Ebeling home"><span class="wordmark-mark">EE</span><span>EDDIE EBELING</span></a>
-    <div class="nav-links"><a :href="sectionHref('about')">About</a><a :href="sectionHref('technologies')">Technologies</a><a :href="sectionHref('experience')">Experience</a><a :href="sectionHref('contact')">Contact</a></div>
-    <div class="nav-actions">
-      <button class="theme-toggle" type="button" :aria-pressed="theme === 'light'" :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggleTheme"><span class="theme-toggle-icon" aria-hidden="true">{{ theme === "dark" ? "☼" : "☾" }}</span><span>{{ theme === "dark" ? "Light" : "Dark" }}</span></button>
+  <nav class="site-header shell" aria-label="Primary navigation">
+    <a class="site-header__wordmark" :href="isHome ? '#top' : '/'" aria-label="Eddie Ebeling home"><span class="site-header__mark">EE</span><span>EDDIE EBELING</span></a>
+    <div class="site-header__links"><a :href="sectionHref('about')">About</a><a :href="sectionHref('technologies')">Technologies</a><a :href="sectionHref('experience')">Experience</a><a :href="sectionHref('contact')">Contact</a></div>
+    <div class="site-header__actions">
+      <button class="site-header__theme-toggle" type="button" :aria-pressed="theme === 'light'" :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggleTheme"><span class="site-header__theme-icon" aria-hidden="true">{{ theme === "dark" ? "☼" : "☾" }}</span><span>{{ theme === "dark" ? "Light" : "Dark" }}</span></button>
     </div>
   </nav>
 </template>
