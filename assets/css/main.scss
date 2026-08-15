@@ -12,6 +12,7 @@ a { color: inherit; text-decoration: none; }
 
 .shell { width: min(1180px, calc(100% - 96px)); margin: size(0) auto; }
 .section-label { color: var(--ee-theme-accent-emphasis); text-transform: uppercase; letter-spacing: .17em; font-size: var(--ee-theme-font-size-label); font-weight: 700; }
+section[id]:not(#top) { scroll-margin-top: size(4); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: size(0); margin: size(-0.125); overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .site-header {

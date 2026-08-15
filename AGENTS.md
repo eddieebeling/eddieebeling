@@ -9,6 +9,8 @@ The site showcases Eddie's experience, preferred technologies, and professional 
 ## Technology and architecture
 
 - Nuxt 3 with Vue 3.
+- Nuxt Content for Markdown-based site content.
+- Pinia for the runtime content store and theme state.
 - Use JavaScript and Vue SFCs. Do not introduce TypeScript.
 - In Vue SFCs, keep the `<template>` block before the `<script setup>` block.
 - Page routes live in `pages/`.
@@ -22,7 +24,9 @@ The site showcases Eddie's experience, preferred technologies, and professional 
 
 When making changes, inspect the current files first and preserve existing user changes. Do not replace the project structure or migrate frameworks unless explicitly requested.
 
-Content is primarily maintained in `pages/index.vue`, including the experience list, technologies list, social links, and theme toggle. Keep professional details accurate and use Mount Sterling, IL when referring to Dot Foods. Eddie lives in Scottsdale, AZ; do not substitute one location for the other.
+Editable site copy is maintained in `content/portfolio.md`. Nuxt Content loads that document through `server/api/site-content.get.js`, and `stores/siteContent.js` provides it to the Vue components through Pinia. Keep professional details accurate and use Mount Sterling, IL when referring to Dot Foods. Eddie lives in Scottsdale, AZ; do not substitute one location for the other.
+
+When adding or changing editable copy, update `content/portfolio.md` rather than hard-coding it in a component. Keep the existing structured frontmatter shape so the Pinia store and templates remain compatible. The Markdown document is build-time content; do not add client-side CMS database queries unless the rendering architecture is intentionally changed.
 
 ## Styling conventions
 
@@ -85,6 +89,8 @@ npm run generate
 
 The generate command builds the Style Dictionary tokens, runs `nuxt generate`, and copies the result to `dist`.
 
+Nuxt Content uses `better-sqlite3` during generation. The internal `.data/` cache and Nuxt Content SQL dump are generated artifacts and must not be committed or published.
+
 Preview the generated site:
 
 ```bash
@@ -103,11 +109,13 @@ Do not change the publish directory to `.output/public` unless the copy-to-dist 
 
 ## Validation
 
-For changes to site code, styles, tokens, or build configuration:
+For changes to site code, styles, tokens, content, or build configuration:
 
 1. Run `git diff --check`.
 2. Run `npm run generate`.
 3. Inspect the resulting diff and confirm that generated token files are consistent with the token source changes.
+
+For content changes, confirm the updated copy appears in the generated static HTML and that no `.data/` or internal Nuxt Content files are included in the public output.
 
 For styling changes, check both dark and light themes and test narrow mobile widths when possible. Pay particular attention to horizontal overflow, long headings, form controls, orbit decorations, and navigation.
 

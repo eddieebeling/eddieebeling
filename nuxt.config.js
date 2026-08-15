@@ -1,17 +1,16 @@
 export default defineNuxtConfig({
   compatibilityDate: "2026-08-11",
   devtools: { enabled: false },
+  modules: ["@pinia/nuxt", "@nuxt/content"],
   css: ["~/assets/css/main.scss"],
+  nitro: {
+    prerender: {
+      ignore: ["/__nuxt_content/content/sql_dump.txt"],
+    },
+  },
   app: {
     head: {
       htmlAttrs: { lang: "en" },
-      title: "Eddie Ebeling — Creative Technologist",
-      meta: [
-        {
-          name: "description",
-          content: "The portfolio of Eddie Ebeling, a front-end developer and product-minded creative technologist.",
-        },
-      ],
       link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
     },
   },

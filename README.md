@@ -23,6 +23,10 @@ npm run dev
 
 The development site is available at `http://localhost:3000` by default.
 
+## Manage site content
+
+Editable portfolio copy lives in [`content/portfolio.md`](./content/portfolio.md). Nuxt Content loads that Markdown document during the build and hydrates the Pinia content store for the site. Update the Markdown file and run `npm run generate` to verify the static output locally; Netlify uses the same command when deploying.
+
 ## Build and preview
 
 Generate the static site locally:
