@@ -7,7 +7,7 @@
   },
   "scripts": {
     "tokens": "node build.js",
-    "dev": "npm run tokens && nuxt dev",
+    "dev": "npm run tokens && nuxt dev --no-fork",
     "build": "npm run tokens && nuxt build",
     "generate": "npm run tokens && nuxt generate && node scripts/copy-static-to-dist.mjs",
     "preview": "nuxt preview"
